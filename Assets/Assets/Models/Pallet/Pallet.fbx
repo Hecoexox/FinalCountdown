@@ -11,13 +11,13 @@ FBXHeaderExtension:  {
 		Version: 1000
 		Year: 2025
 		Month: 4
-		Day: 23
-		Hour: 2
-		Minute: 2
-		Second: 30
-		Millisecond: 653
+		Day: 24
+		Hour: 13
+		Minute: 27
+		Second: 49
+		Millisecond: 79
 	}
-	Creator: "Blockbench 4.12.2"
+	Creator: "Blockbench 4.12.4"
 	SceneInfo: "SceneInfo::GlobalInfo", "UserData" {
 		Type: "UserData"
 		Version: 100
@@ -36,20 +36,20 @@ FBXHeaderExtension:  {
 			P: "Original", "Compound", "", ""
 			P: "Original|ApplicationVendor", "KString", "", "", "Blockbench"
 			P: "Original|ApplicationName", "KString", "", "", "Blockbench FBX Exporter"
-			P: "Original|ApplicationVersion", "KString", "", "", "4.12.2"
+			P: "Original|ApplicationVersion", "KString", "", "", "4.12.4"
 			P: "Original|DateTime_GMT", "DateTime", "", "", "01/01/1970 00:00:00.000"
 			P: "Original|FileName", "KString", "", "", "/foobar.fbx"
 			P: "LastSaved", "Compound", "", ""
 			P: "LastSaved|ApplicationVendor", "KString", "", "", "Blockbench"
 			P: "LastSaved|ApplicationName", "KString", "", "", "Blockbench FBX Exporter"
-			P: "LastSaved|ApplicationVersion", "KString", "", "", "4.12.2"
+			P: "LastSaved|ApplicationVersion", "KString", "", "", "4.12.4"
 			P: "LastSaved|DateTime_GMT", "DateTime", "", "", "01/01/1970 00:00:00.000"
 			P: "Original|ApplicationNativeFile", "KString", "", "", ""
 		}
 	}
 }
 FileId: "iVFoobar"
-CreationTime: "2025-04-22 23:02:30:653"
+CreationTime: "2025-04-24 10:27:49:079"
 Creator: "Made with Blockbench"
 GlobalSettings:  {
 	Version: 1000
@@ -78,7 +78,7 @@ GlobalSettings:  {
 
 Documents:  {
 	Count: 1
-	Document: 58953952 {
+	Document: 1964198757 {
 		Scene: "Scene"
 		Properties70:  {
 			P: "SourceObject", "object", "", ""
@@ -98,7 +98,7 @@ References:
 
 Definitions:  {
 	Version: 100
-	Count: 15
+	Count: 27
 	ObjectType: "GlobalSettings" {
 		Count: 1
 	}
@@ -194,7 +194,7 @@ Definitions:  {
 		}
 	}
 	ObjectType: "Material" {
-		Count: 4
+		Count: 8
 		PropertyTemplate: "FbxSurfaceLambert" {
 			Properties70:  {
 				P: "ShadingModel", "KString", "", "", "Lambert"
@@ -218,7 +218,7 @@ Definitions:  {
 		}
 	}
 	ObjectType: "Texture" {
-		Count: 4
+		Count: 8
 		PropertyTemplate: "FbxFileTexture" {
 			Properties70:  {
 				P: "TextureTypeUse", "enum", "", "",0
@@ -241,7 +241,7 @@ Definitions:  {
 		}
 	}
 	ObjectType: "Video" {
-		Count: 4
+		Count: 8
 		PropertyTemplate: "FbxVideo" {
 			Properties70:  {
 				P: "ImageSequence", "bool", "", "",0
@@ -268,9 +268,9 @@ Definitions:  {
 ;------------------------------------------------------------------
 
 Objects:  {
-	Geometry: 58355205, "Geometry::cuboid", "Mesh" {
+	Geometry: 4481599, "Geometry::Pallet", "Mesh" {
 		Vertices: *528 {
-			a: 50,28.125,6.25,50,28.125,-6.25,50,21.875,6.25,50,21.875,-6.25,-50,28.125,6.25,-50,28.125,-6.25,-50,21.875,6.25,-50,21.875,-6.25,50,28.125,-43.75,50,28.125,-56.25,50,21.875,-43.75,50,21.875,-56.25,-50,28.125,-43.75,-50,28.125,-56.25,-50,21.875,-43.75,-50,21.875,-56.25,-37.499999999999986,21.875,-106.25,-49.999999999999986,21.875,-106.25,-37.499999999999986,15.625,-106.25,-49.999999999999986,15.625,-106.25,-37.50000000000001,21.875,6.25,-50.00000000000001,21.875,6.25,-37.50000000000001,15.625,6.25,-50.00000000000001,15.625,6.25,-37.499999999999986,9.374999999999995,-106.25,-49.999999999999986,9.374999999999995,-106.25,-37.499999999999986,3.1249999999999942,-106.25,-49.999999999999986,3.1249999999999942,-106.25,-37.50000000000001,9.374999999999995,6.25,-50.00000000000001,9.374999999999995,6.25,-37.50000000000001,3.1249999999999942,6.25,-50.00000000000001,3.1249999999999942,6.25,50.00000000000001,9.374999999999995,-106.25,37.50000000000001,9.374999999999995,-106.25,50.00000000000001,3.1249999999999942,-106.25,37.50000000000001,3.1249999999999942,-106.25,49.999999999999986,9.374999999999995,6.25,37.499999999999986,9.374999999999995,6.25,49.999999999999986,3.1249999999999942,6.25,37.499999999999986,3.1249999999999942,6.25,-37.5,15.624999999999995,-56.25,-50,15.624999999999995,-56.25,-37.5,9.374999999999995,-56.25,-50,9.374999999999995,-56.25,-37.5,15.624999999999995,-43.75,-50,15.624999999999995,-43.75,-37.5,9.374999999999995,-43.75,-50,9.374999999999995,-43.75,-37.5,15.624999999999995,-106.25,-50,15.624999999999995,-106.25,-37.5,9.374999999999995,-106.25,-50,9.374999999999995,-106.25,-37.5,15.624999999999995,-93.75,-50,15.624999999999995,-93.75,-37.5,9.374999999999995,-93.75,-50,9.374999999999995,-93.75,-37.5,15.624999999999995,-6.25,-50,15.624999999999995,-6.25,-37.5,9.374999999999995,-6.25,-50,9.374999999999995,-6.25,-37.5,15.624999999999995,6.25,-50,15.624999999999995,6.25,-37.5,9.374999999999995,6.25,-50,9.374999999999995,6.25,6.24999999999999,15.624999999999995,-6.25,-6.25000000000001,15.624999999999995,-6.25,6.24999999999999,9.374999999999995,-6.25,-6.25000000000001,9.374999999999995,-6.25,6.249999999999988,15.624999999999995,6.25,-6.250000000000012,15.624999999999995,6.25,6.249999999999988,9.374999999999995,6.25,-6.250000000000012,9.374999999999995,6.25,6.24999999999999,15.624999999999995,-106.25,-6.25000000000001,15.624999999999995,-106.25,6.24999999999999,9.374999999999995,-106.25,-6.25000000000001,9.374999999999995,-106.25,6.249999999999988,15.624999999999995,-93.75,-6.250000000000012,15.624999999999995,-93.75,6.249999999999988,9.374999999999995,-93.75,-6.250000000000012,9.374999999999995,-93.75,6.24999999999999,15.624999999999995,-56.25,-6.25000000000001,15.624999999999995,-56.25,6.24999999999999,9.374999999999995,-56.25,-6.25000000000001,9.374999999999995,-56.25,6.249999999999988,15.624999999999995,-43.75,-6.250000000000012,15.624999999999995,-43.75,6.249999999999988,9.374999999999995,-43.75,-6.250000000000012,9.374999999999995,-43.75,49.999999999999986,15.624999999999995,-6.25,37.499999999999986,15.624999999999995,-6.25,49.999999999999986,9.374999999999995,-6.25,37.499999999999986,9.374999999999995,-6.25,49.999999999999986,15.624999999999995,6.25,37.499999999999986,15.624999999999995,6.25,49.999999999999986,9.374999999999995,6.25,37.499999999999986,9.374999999999995,6.25,49.999999999999986,15.624999999999995,-106.25,37.499999999999986,15.624999999999995,-106.25,49.999999999999986,9.374999999999995,-106.25,37.499999999999986,9.374999999999995,-106.25,49.999999999999986,15.624999999999995,-93.75,37.499999999999986,15.624999999999995,-93.75,49.999999999999986,9.374999999999995,-93.75,37.499999999999986,9.374999999999995,-93.75,49.999999999999986,15.624999999999995,-56.25,37.499999999999986,15.624999999999995,-56.25,49.999999999999986,9.374999999999995,-56.25,37.499999999999986,9.374999999999995,-56.25,49.999999999999986,15.624999999999995,-43.75,37.499999999999986,15.624999999999995,-43.75,49.999999999999986,9.374999999999995,-43.75,37.499999999999986,9.374999999999995,-43.75,50.00000000000001,21.875,-106.25,37.50000000000001,21.875,-106.25,50.00000000000001,15.625,-106.25,37.50000000000001,15.625,-106.25,49.999999999999986,21.875,6.25,37.499999999999986,21.875,6.25,49.999999999999986,15.625,6.25,37.499999999999986,15.625,6.25,6.250000000000012,21.875,-106.25,-6.249999999999988,21.875,-106.25,6.250000000000012,15.625,-106.25,-6.249999999999988,15.625,-106.25,6.249999999999988,21.875,6.25,-6.250000000000012,21.875,6.25,6.249999999999988,15.625,6.25,-6.250000000000012,15.625,6.25,50,28.125,-68.75,50,28.125,-81.25,50,21.875,-68.75,50,21.875,-81.25,-50,28.125,-68.75,-50,28.125,-81.25,-50,21.875,-68.75,-50,21.875,-81.25,50,28.125,-93.75,50,28.125,-106.25,50,21.875,-93.75,50,21.875,-106.25,-50,28.125,-93.75,-50,28.125,-106.25,-50,21.875,-93.75,-50,21.875,-106.25,37.5,9.375,-93.75,37.5,9.375,-106.25,37.5,3.125,-93.75,37.5,3.125,-106.25,-37.5,9.375,-93.75,-37.5,9.375,-106.25,-37.5,3.125,-93.75,-37.5,3.125,-106.25,37.5,9.375,6.2499999999999885,37.5,9.375,-6.250000000000011,37.5,3.125,6.2499999999999885,37.5,3.125,-6.250000000000011,-37.5,9.375,6.2499999999999885,-37.5,9.375,-6.250000000000011,-37.5,3.125,6.2499999999999885,-37.5,3.125,-6.250000000000011,6.25000000000001,9.375,-93.75000000000001,-6.24999999999999,9.375,-93.75000000000001,6.25000000000001,3.125,-93.75000000000001,-6.24999999999999,3.125,-93.75000000000001,6.24999999999999,9.375,-6.250000000000011,-6.25000000000001,9.375,-6.250000000000011,6.24999999999999,3.125,-6.250000000000011,-6.25000000000001,3.125,-6.250000000000011,50,28.125,-18.75,50,28.125,-31.25,50,21.875,-18.75,50,21.875,-31.25,-50,28.125,-18.75,-50,28.125,-31.25,-50,21.875,-18.75,-50,21.875,-31.25
+			a: 37.5,18.75,43.75,37.5,18.75,34.02775,37.5,14.0625,43.75,37.5,14.0625,34.02775,-37.5,18.75,43.75,-37.5,18.75,34.02775,-37.5,14.0625,43.75,-37.5,14.0625,34.02775,37.5,18.75,4.861125,37.5,18.75,-4.861125,37.5,14.0625,4.861125,37.5,14.0625,-4.861125,-37.5,18.75,4.861125,-37.5,18.75,-4.861125,-37.5,14.0625,4.861125,-37.5,14.0625,-4.861125,-28.125,14.0625,-43.75,-37.5,14.0625,-43.75,-28.125,9.375,-43.75,-37.5,9.375,-43.75,-28.125,14.0625,43.75,-37.5,14.0625,43.75,-28.125,9.375,43.75,-37.5,9.375,43.75,-28.125,4.6875,-43.75,-37.5,4.6875,-43.75,-28.125,0,-43.75,-37.5,0,-43.75,-28.125,4.6875,43.75,-37.5,4.6875,43.75,-28.125,0,43.75,-37.5,0,43.75,37.5,4.6875,-43.75,28.125,4.6875,-43.75,37.5,0,-43.75,28.125,0,-43.75,37.5,4.6875,43.75,28.125,4.6875,43.75,37.5,0,43.75,28.125,0,43.75,-28.125,9.375,-4.861125,-37.5,9.375,-4.861125,-28.125,4.6875,-4.861125,-37.5,4.6875,-4.861125,-28.125,9.375,4.861125,-37.5,9.375,4.861125,-28.125,4.6875,4.861125,-37.5,4.6875,4.861125,-28.125,9.375,-43.75,-37.5,9.375,-43.75,-28.125,4.6875,-43.75,-37.5,4.6875,-43.75,-28.125,9.375,-34.02775,-37.5,9.375,-34.02775,-28.125,4.6875,-34.02775,-37.5,4.6875,-34.02775,-28.125,9.375,34.02775,-37.5,9.375,34.02775,-28.125,4.6875,34.02775,-37.5,4.6875,34.02775,-28.125,9.375,43.75,-37.5,9.375,43.75,-28.125,4.6875,43.75,-37.5,4.6875,43.75,4.6875,9.375,34.02775,-4.6875,9.375,34.02775,4.6875,4.6875,34.02775,-4.6875,4.6875,34.02775,4.6875,9.375,43.75,-4.6875,9.375,43.75,4.6875,4.6875,43.75,-4.6875,4.6875,43.75,4.6875,9.375,-43.75,-4.6875,9.375,-43.75,4.6875,4.6875,-43.75,-4.6875,4.6875,-43.75,4.6875,9.375,-34.02775,-4.6875,9.375,-34.02775,4.6875,4.6875,-34.02775,-4.6875,4.6875,-34.02775,4.6875,9.375,-4.861125,-4.6875,9.375,-4.861125,4.6875,4.6875,-4.861125,-4.6875,4.6875,-4.861125,4.6875,9.375,4.861125,-4.6875,9.375,4.861125,4.6875,4.6875,4.861125,-4.6875,4.6875,4.861125,37.5,9.375,34.02775,28.125,9.375,34.02775,37.5,4.6875,34.02775,28.125,4.6875,34.02775,37.5,9.375,43.75,28.125,9.375,43.75,37.5,4.6875,43.75,28.125,4.6875,43.75,37.5,9.375,-43.75,28.125,9.375,-43.75,37.5,4.6875,-43.75,28.125,4.6875,-43.75,37.5,9.375,-34.02775,28.125,9.375,-34.02775,37.5,4.6875,-34.02775,28.125,4.6875,-34.02775,37.5,9.375,-4.861125,28.125,9.375,-4.861125,37.5,4.6875,-4.861125,28.125,4.6875,-4.861125,37.5,9.375,4.861125,28.125,9.375,4.861125,37.5,4.6875,4.861125,28.125,4.6875,4.861125,37.5,14.0625,-43.75,28.125,14.0625,-43.75,37.5,9.375,-43.75,28.125,9.375,-43.75,37.5,14.0625,43.75,28.125,14.0625,43.75,37.5,9.375,43.75,28.125,9.375,43.75,4.6875,14.0625,-43.75,-4.6875,14.0625,-43.75,4.6875,9.375,-43.75,-4.6875,9.375,-43.75,4.6875,14.0625,43.75,-4.6875,14.0625,43.75,4.6875,9.375,43.75,-4.6875,9.375,43.75,37.5,18.75,-14.5833125,37.5,18.75,-24.3055625,37.5,14.0625,-14.5833125,37.5,14.0625,-24.3055625,-37.5,18.75,-14.5833125,-37.5,18.75,-24.3055625,-37.5,14.0625,-14.5833125,-37.5,14.0625,-24.3055625,37.5,18.75,-34.02775,37.5,18.75,-43.75,37.5,14.0625,-34.02775,37.5,14.0625,-43.75,-37.5,18.75,-34.02775,-37.5,18.75,-43.75,-37.5,14.0625,-34.02775,-37.5,14.0625,-43.75,28.125,4.6875,-34.02775,28.125,4.6875,-43.75,28.125,0,-34.02775,28.125,0,-43.75,-28.125,4.6875,-34.02775,-28.125,4.6875,-43.75,-28.125,0,-34.02775,-28.125,0,-43.75,28.125,4.6875,43.75,28.125,4.6875,34.02775,28.125,0,43.75,28.125,0,34.02775,-28.125,4.6875,43.75,-28.125,4.6875,34.02775,-28.125,0,43.75,-28.125,0,34.02775,4.6875,4.6875,-34.02775,-4.6875,4.6875,-34.02775,4.6875,0,-34.02775,-4.6875,0,-34.02775,4.6875,4.6875,34.02775,-4.6875,4.6875,34.02775,4.6875,0,34.02775,-4.6875,0,34.02775,37.5,18.75,24.3055625,37.5,18.75,14.5833125,37.5,14.0625,24.3055625,37.5,14.0625,14.5833125,-37.5,18.75,24.3055625,-37.5,18.75,14.5833125,-37.5,14.0625,24.3055625,-37.5,14.0625,14.5833125
 		}
 		PolygonVertexIndex: *528 {
 			a: 1,0,2,-4,6,4,5,-8,4,0,1,-6,3,2,6,-8,2,0,4,-7,5,1,3,-8,9,8,10,-12,14,12,13,-16,12,8,9,-14,11,10,14,-16,10,8,12,-15,13,9,11,-16,17,16,18,-20,22,20,21,-24,20,16,17,-22,19,18,22,-24,18,16,20,-23,21,17,19,-24,25,24,26,-28,30,28,29,-32,28,24,25,-30,27,26,30,-32,26,24,28,-31,29,25,27,-32,33,32,34,-36,38,36,37,-40,36,32,33,-38,35,34,38,-40,34,32,36,-39,37,33,35,-40,41,40,42,-44,46,44,45,-48,44,40,41,-46,43,42,46,-48,42,40,44,-47,45,41,43,-48,49,48,50,-52,54,52,53,-56,52,48,49,-54,51,50,54,-56,50,48,52,-55,53,49,51,-56,57,56,58,-60,62,60,61,-64,60,56,57,-62,59,58,62,-64,58,56,60,-63,61,57,59,-64,65,64,66,-68,70,68,69,-72,68,64,65,-70,67,66,70,-72,66,64,68,-71,69,65,67,-72,73,72,74,-76,78,76,77,-80,76,72,73,-78,75,74,78,-80,74,72,76,-79,77,73,75,-80,81,80,82,-84,86,84,85,-88,84,80,81,-86,83,82,86,-88,82,80,84,-87,85,81,83,-88,89,88,90,-92,94,92,93,-96,92,88,89,-94,91,90,94,-96,90,88,92,-95,93,89,91,-96,97,96,98,-100,102,100,101,-104,100,96,97,-102,99,98,102,-104,98,96,100,-103,101,97,99,-104,105,104,106,-108,110,108,109,-112,108,104,105,-110,107,106,110,-112,106,104,108,-111,109,105,107,-112,113,112,114,-116,118,116,117,-120,116,112,113,-118,115,114,118,-120,114,112,116,-119,117,113,115,-120,121,120,122,-124,126,124,125,-128,124,120,121,-126,123,122,126,-128,122,120,124,-127,125,121,123,-128,129,128,130,-132,134,132,133,-136,132,128,129,-134,131,130,134,-136,130,128,132,-135,133,129,131,-136,137,136,138,-140,142,140,141,-144,140,136,137,-142,139,138,142,-144,138,136,140,-143,141,137,139,-144,145,144,146,-148,150,148,149,-152,148,144,145,-150,147,146,150,-152,146,144,148,-151,149,145,147,-152,153,152,154,-156,158,156,157,-160,156,152,153,-158,155,154,158,-160,154,152,156,-159,157,153,155,-160,161,160,162,-164,166,164,165,-168,164,160,161,-166,163,162,166,-168,162,160,164,-167,165,161,163,-168,169,168,170,-172,174,172,173,-176,172,168,169,-174,171,170,174,-176,170,168,172,-175,173,169,171,-176
@@ -282,7 +282,7 @@ Objects:  {
 			MappingInformationType: "ByPolygon"
 			ReferenceInformationType: "Direct"
 			Normals: *396 {
-				a: 1,0,0,-1,0,0,0,1,0,0,-1,0,0,0,1,0,0,-1,1,0,0,-1,0,0,0,1,0,0,-1,0,0,0,1,0,0,-1,0,0,-1,0,0,1,0,1,0,0,-1,0,1,0,1.9737298215558337e-16,-1,0,-1.9737298215558337e-16,0,0,-1,0,0,1,0,1,0,0,-1,0,1,0,1.9737298215558337e-16,-1,0,-1.9737298215558337e-16,0,0,-1,0,0,1,0,1,0,0,-1,0,1,0,1.9737298215558337e-16,-1,0,-1.9737298215558337e-16,0,0,-1,0,0,1,0,1,0,0,-1,0,1,0,0,-1,0,0,0,0,-1,0,0,1,0,1,0,0,-1,0,1,0,0,-1,0,0,0,0,-1,0,0,1,0,1,0,0,-1,0,1,0,0,-1,0,0,0,0,-1,0,0,1,0,1,0,0,-1,0,1,0,2.220446049250313e-16,-1,0,-2.220446049250313e-16,0,0,-1,0,0,1,0,1,0,0,-1,0,1,0,2.220446049250313e-16,-1,0,-2.220446049250313e-16,0,0,-1,0,0,1,0,1,0,0,-1,0,1,0,2.220446049250313e-16,-1,0,-2.220446049250313e-16,0,0,-1,0,0,1,0,1,0,0,-1,0,1,0,0,-1,0,0,0,0,-1,0,0,1,0,1,0,0,-1,0,1,0,0,-1,0,0,0,0,-1,0,0,1,0,1,0,0,-1,0,1,0,0,-1,0,0,0,0,-1,0,0,1,0,1,0,0,-1,0,1,0,1.9737298215558337e-16,-1,0,-1.9737298215558337e-16,0,0,-1,0,0,1,0,1,0,0,-1,0,1,0,2.220446049250313e-16,-1,0,-2.220446049250313e-16,1,0,0,-1,0,0,0,1,0,0,-1,0,0,0,1,0,0,-1,1,0,0,-1,0,0,0,1,0,0,-1,0,0,0,1,0,0,-1,1,0,0,-1,0,0,0,1,0,0,-1,0,0,0,1,0,0,-1,1,0,0,-1,0,0,0,1,0,0,-1,0,0,0,1,0,0,-1,0,0,-1,0,0,1,0,1,0,0,-1,0,1,0,2.220446049250313e-16,-1,0,-2.220446049250313e-16,1,0,0,-1,0,0,0,1,0,0,-1,0,0,0,1,0,0,-1
+				a: 1,0,0,-1,0,0,0,1,0,0,-1,0,0,0,1,0,0,-1,1,0,0,-1,0,0,0,1,0,0,-1,0,0,0,1,0,0,-1,0,0,-1,0,0,1,0,1,0,0,-1,0,1,0,0,-1,0,0,0,0,-1,0,0,1,0,1,0,0,-1,0,1,0,0,-1,0,0,0,0,-1,0,0,1,0,1,0,0,-1,0,1,0,0,-1,0,0,0,0,-1,0,0,1,0,1,0,0,-1,0,1,0,0,-1,0,0,0,0,-1,0,0,1,0,1,0,0,-1,0,1,0,0,-1,0,0,0,0,-1,0,0,1,0,1,0,0,-1,0,1,0,0,-1,0,0,0,0,-1,0,0,1,0,1,0,0,-1,0,1,0,0,-1,0,0,0,0,-1,0,0,1,0,1,0,0,-1,0,1,0,0,-1,0,0,0,0,-1,0,0,1,0,1,0,0,-1,0,1,0,0,-1,0,0,0,0,-1,0,0,1,0,1,0,0,-1,0,1,0,0,-1,0,0,0,0,-1,0,0,1,0,1,0,0,-1,0,1,0,0,-1,0,0,0,0,-1,0,0,1,0,1,0,0,-1,0,1,0,0,-1,0,0,0,0,-1,0,0,1,0,1,0,0,-1,0,1,0,0,-1,0,0,0,0,-1,0,0,1,0,1,0,0,-1,0,1,0,0,-1,0,0,1,0,0,-1,0,0,0,1,0,0,-1,0,0,0,1,0,0,-1,1,0,0,-1,0,0,0,1,0,0,-1,0,0,0,1,0,0,-1,1,0,0,-1,0,0,0,1,0,0,-1,0,0,0,1,0,0,-1,1,0,0,-1,0,0,0,1,0,0,-1,0,0,0,1,0,0,-1,0,0,-1,0,0,1,0,1,0,0,-1,0,1,0,0,-1,0,0,1,0,0,-1,0,0,0,1,0,0,-1,0,0,0,1,0,0,-1
 			}
 		}
 		LayerElementUV: 0 {
@@ -319,13 +319,13 @@ Objects:  {
 			}
 		}
 	}
-	Model: 51427462, "Model::cuboid", "Mesh" {
+	Model: 77821968, "Model::Pallet", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "RotationActive", "bool", "", "",1
 			P: "InheritType", "enum", "", "",1
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
-			P: "Lcl Translation", "Lcl Translation", "", "A",0,0,50
+			P: "Lcl Translation", "Lcl Translation", "", "A",0,0,0
 			P: "RotationPivot", "Vector3D", "Vector", "",0,0,0
 			P: "Lcl Rotation", "Lcl Rotation", "", "A",0,0,0
 			P: "RotationOrder", "enum", "", "",5
@@ -334,7 +334,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Material: 83643612, "Material::texture_OrangeJuice.png", "" {
+	Material: 64976063, "Material::texture_OrangeJuice.png", "" {
 		Version: 102
 		ShadingModel: "lambert"
 		MultiLayer: 0
@@ -345,7 +345,7 @@ Objects:  {
 			P: "Opacity", "double", "Number", "",1
 		}
 	}
-	Texture: 10196712, "Texture::texture_OrangeJuice.png", "" {
+	Texture: 60566093, "Texture::texture_OrangeJuice.png", "" {
 		Type: "TextureVideoClip"
 		Version: 202
 		TextureName: "Texture::texture_OrangeJuice.png"
@@ -357,7 +357,7 @@ Objects:  {
 		Texture_Alpha_Source: "None"
 		Cropping: 0,0,0,0
 	}
-	Video: 47690358, "Video::texture_OrangeJuice.png", "Clip" {
+	Video: 9856647, "Video::texture_OrangeJuice.png", "Clip" {
 		Type: "Clip"
 		Properties70:  {
 			P: "Path", "KString", "XRefUrl", "", "C:\Users\kaani\OneDrive\Masaüstü\texture_OrangeJuice.png"
@@ -367,7 +367,7 @@ Objects:  {
 		RelativeFilename: "texture_OrangeJuice.png"
 		Content: "iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAJRJREFUWEdjjI6O/s9AAli6dCkjCcoJKmW8v8iNJAcoxu0aZg7Y++oXSSHgLMZG3RAYdcCAh8BoLkAviFrcX6MUHjU7RcF8ahdAMEsIFkQD7gBql3zoZTMjei5Q2uGDoobuDqB2SUeoNsIIgZHnAPSCiNZxjpEIB9wBhBIJreWpWreT49hRB4yGwGgIjIbAaAiMhgAAEAFPIRzM3CoAAAAASUVORK5CYII="
 	}
-	Material: 13940135, "Material::texture_GrapeJuice.png", "" {
+	Material: 88415082, "Material::texture_GrapeJuice.png", "" {
 		Version: 102
 		ShadingModel: "lambert"
 		MultiLayer: 0
@@ -378,7 +378,7 @@ Objects:  {
 			P: "Opacity", "double", "Number", "",1
 		}
 	}
-	Texture: 5863885, "Texture::texture_GrapeJuice.png", "" {
+	Texture: 24242610, "Texture::texture_GrapeJuice.png", "" {
 		Type: "TextureVideoClip"
 		Version: 202
 		TextureName: "Texture::texture_GrapeJuice.png"
@@ -390,7 +390,7 @@ Objects:  {
 		Texture_Alpha_Source: "None"
 		Cropping: 0,0,0,0
 	}
-	Video: 81640894, "Video::texture_GrapeJuice.png", "Clip" {
+	Video: 36094503, "Video::texture_GrapeJuice.png", "Clip" {
 		Type: "Clip"
 		Properties70:  {
 			P: "Path", "KString", "XRefUrl", "", "C:\Users\kaani\OneDrive\Masaüstü\texture_GrapeJuice.png"
@@ -400,7 +400,7 @@ Objects:  {
 		RelativeFilename: "texture_GrapeJuice.png"
 		Content: "iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAJRJREFUWEdjjI6O/s9AAli6dCkjCcoJKmXsi19NkgOKFoYOMwfsffWLpBBwFmOjbgiMOmDAQ2A0F6AXRMYsASiFx9k/G8B8ahdAMEsIFkQD7gBql3zoZTMjei64WLoRRQ3dHUDtko5QbYQRAiPPAegFEa3jHCMRDrgDCCUSWstTtW4nx7GjDhgNgdEQGA2B0RAYDQEAvG1RIalTnQIAAAAASUVORK5CYII="
 	}
-	Material: 70233698, "Material::texture_AppleJuice.png", "" {
+	Material: 95529363, "Material::texture_AppleJuice.png", "" {
 		Version: 102
 		ShadingModel: "lambert"
 		MultiLayer: 0
@@ -411,7 +411,7 @@ Objects:  {
 			P: "Opacity", "double", "Number", "",1
 		}
 	}
-	Texture: 54804190, "Texture::texture_AppleJuice.png", "" {
+	Texture: 18643126, "Texture::texture_AppleJuice.png", "" {
 		Type: "TextureVideoClip"
 		Version: 202
 		TextureName: "Texture::texture_AppleJuice.png"
@@ -423,7 +423,7 @@ Objects:  {
 		Texture_Alpha_Source: "None"
 		Cropping: 0,0,0,0
 	}
-	Video: 85409605, "Video::texture_AppleJuice.png", "Clip" {
+	Video: 25560282, "Video::texture_AppleJuice.png", "Clip" {
 		Type: "Clip"
 		Properties70:  {
 			P: "Path", "KString", "XRefUrl", "", "C:\Users\kaani\OneDrive\Masaüstü\texture_AppleJuice.png"
@@ -433,7 +433,7 @@ Objects:  {
 		RelativeFilename: "texture_AppleJuice.png"
 		Content: "iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAJRJREFUWEdjjI6O/s9AAli6dCkjCcoJKmU8FBtLkgPsFi8eZg7Y++oXSSHgLMZG3RAYdcCAh8BoLkAviNKZmFAKj5n//oH51C6AYJYQLIgG3AHULvnQy2ZG9FzAWpyMoobuDqB2SUeoNsIIgZHnAPSCiNZxjpEIB9wBhBIJreWpWreT49hRB4yGwGgIjIbAaAiMhgAAlddQIb4bp/8AAAAASUVORK5CYII="
 	}
-	Material: 83172172, "Material::texture_Pallet.png", "" {
+	Material: 11911653, "Material::texture_Pallet.png", "" {
 		Version: 102
 		ShadingModel: "lambert"
 		MultiLayer: 0
@@ -444,7 +444,7 @@ Objects:  {
 			P: "Opacity", "double", "Number", "",1
 		}
 	}
-	Texture: 32261063, "Texture::texture_Pallet.png", "" {
+	Texture: 29950017, "Texture::texture_Pallet.png", "" {
 		Type: "TextureVideoClip"
 		Version: 202
 		TextureName: "Texture::texture_Pallet.png"
@@ -456,7 +456,7 @@ Objects:  {
 		Texture_Alpha_Source: "None"
 		Cropping: 0,0,0,0
 	}
-	Video: 89768210, "Video::texture_Pallet.png", "Clip" {
+	Video: 43457413, "Video::texture_Pallet.png", "Clip" {
 		Type: "Clip"
 		Properties70:  {
 			P: "Path", "KString", "XRefUrl", "", "C:\Users\kaani\OneDrive\Masaüstü\texture_Pallet.png"
@@ -466,23 +466,163 @@ Objects:  {
 		RelativeFilename: "texture_Pallet.png"
 		Content: "iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAAXNSR0IArs4c6QAAAmtJREFUeF7tmsFRxDAMRbOdUQIHKqABKuBEBTRABRwogc7YyQ7ZMZk4fpK+4ySYEwOS/PX0bYg3l8+3h59hGIan1+/L1/vz7fvHl49L5OdT7ljL85Vq8eSnOWMvazVCjeaAKQBEG6f5VQDQxdfiJrjRWk0cEBVfEh2FkuZXcYACQLTG1GQJZhUAygnVrlUFgOIQPLQDFABqT36qX8UBCvGHdkBUfOngUgCu6gAFAEUNAmq3W4CIV8RUAaA4BA/tAAUAxXRJjSoOIAuXYg7tgK3ElyCS31dxgAKAokYzAGThvcSs3pYoRSoOxtIFzHiTZNWMrsEUdlQDsDaai98MgEqwug4CoFh0yb60ruKSNPd8gQCo7Wut59nbFG4TAFRcGuc9h0pPlgiAR/A8J90C1mZKTUT0IQBWwXNBYwNRAF4NJXhNAEQmps5FABSLbv1XoDT5+42Q9/NACmUSEgVA17PGIQcsfVBKF1oCQHNJXKqNxM9jzAA8i4w5kUMwtya1+ZpmMwDradwd8Iu/OyB5+cK7jZby+hkQpGk+A4LrVUv3OsEMwHoIrp3gylpesugKyUvXK2rLvM0dkD4YeRudv8UWGZAZgFf0XvPMWyC6b3fnAPJCZMRie538/WmQAEibaOGA+YVKqjk6HPMWaDXR9F9ppQb02SBxifVeITdFMl0SQyEhAEtbIPpCNRU4xUWtnluv2RbYpQOItazCSU3ihu6AhJIK6ljyzxlACncHEL+CGCvItCQZFJBwC8k6gBY4ehz6K3D0Jtf0dwBnni7prTuAUDpzTHfAmadLeusOIJTOHNMdcObpkt7+vQOutjigjC/qs58AAAAASUVORK5CYII="
 	}
+	Material: 30006396, "Material::texture_Scaffolding.png", "" {
+		Version: 102
+		ShadingModel: "lambert"
+		MultiLayer: 0
+		Properties70:  {
+			P: "Emissive", "Vector3D", "Vector", "",0,0,0
+			P: "Ambient", "Vector3D", "Vector", "",0.2,0.2,0.2
+			P: "Diffuse", "Vector3D", "Vector", "",0.8,0.8,0.8
+			P: "Opacity", "double", "Number", "",1
+		}
+	}
+	Texture: 34814802, "Texture::texture_Scaffolding.png", "" {
+		Type: "TextureVideoClip"
+		Version: 202
+		TextureName: "Texture::texture_Scaffolding.png"
+		Media: "Video::texture_Scaffolding.png"
+		FileName: "C:\Users\kaani\OneDrive\Masaüstü\texture_Scaffolding.png"
+		RelativeFilename: "texture_Scaffolding.png"
+		ModelUVTranslation: 0,0
+		ModelUVScaling: 1,1
+		Texture_Alpha_Source: "None"
+		Cropping: 0,0,0,0
+	}
+	Video: 60508771, "Video::texture_Scaffolding.png", "Clip" {
+		Type: "Clip"
+		Properties70:  {
+			P: "Path", "KString", "XRefUrl", "", "C:\Users\kaani\OneDrive\Masaüstü\texture_Scaffolding.png"
+		}
+		UseMipMap: 0
+		Filename: "C:\Users\kaani\OneDrive\Masaüstü\texture_Scaffolding.png"
+		RelativeFilename: "texture_Scaffolding.png"
+		Content: "iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAAAAXNSR0IArs4c6QAABl5JREFUeF7tnS+TFDEQxfccgg+AowosEocEDIWDUygUHhDUoblCAB6FQh04CgNIHBILVTg+wAncUtmrXrIhySSZN3/ezsMctzPp6bz+pdPJzOwdXLr6cb0i+vfz262DT++uVfl88+7Xg5OTk/Xh4eH2J1GXB3W1WsxBvSkw7oIpAAqEKjylWsxCu4Od5gBoMa4MEFetScyWACDbKAPg1DxQDYATk9GSpgDGqAF9pgRAUwCOAMoaoKX7KgITRaA/mmyJ5X662sCtuV0zJ541t7W0/7v7/537j9fv37zYrLPDYx++/1rfvnIxesyde+/z6abN2xvntxnJ+WA2T4+P1+ePjra/mz07br+7voTLRFs1CIBKAOx0P6DusxAA+yx3ftexFAC1I10A1Cq2Wu3UAH4GCEc+ItA5mw6CMAPUdkcA1CoWAaBrtPqXiGWHkva5drUFXthlTQF1EPxXBIbB8Ud+bH4vPT+sC3Lt6rpQdrZqgEQNYIVULD2Xpv0hILj+++X6y4VHvZepKgLzA2SbAXJpObUiKAWkTz2BmBLKcsQyz/pvmecH1c8OQ8/9KQAFwLBg7qzNwxEdK+jcMrBruhiiOBxWhuVaj27OtKb8XMFoc3oIjwPKNnpix/pmgLFD23q7emw/7XrZreDcSC6dEqbqmK5bpsCmyg63fnNFW2wpmDtfo7ssEFOdtQUgNt/bZ6l5332eW0ZauxQgSu9Thf3fdXcAqFnP+8FNTQc5cKbvujxwChTtA5Qs0VLFT6ptOJX4RaJlBmfT7vTZ8dSdQQtn6n5AeNdT4T9TILsP0LVdG4qaqvRLppIUALWBEgB1iiX3AXLBt3k/Nar6TiV+BqjrzmolAOoUi+4DlC7/YgC0bAKF00Hf4jB1R7BOmmWc3Xk3MFbIlRSATr6+u4bLCMG0vdw8+vX6ybOVvT7lu9O1jHPnxh4Fmzr4tRmEbfcOiUwSgNgoL03vJcu/kpVFS0eXHMwWvXYACA2UPACCnA7c9WtHb+hz67uDLeLtQ5sdAJz4D54/XcWeBi5N6+68krV/uDT0n+ztI6wyQJ16WQBag9knc9S5r7P7KtAJQA6CrmPm3FDzfd/O17bfx+ySBODPj4eblzXOXX412AMgfef72gD2PX/RAMRGe64uqNk/6BsYtW9XIDsFuCxgGcC/REmRl1od+Nu8dmMnvNFjn4fHY9u8JV3XzmBapaIaoHbL1y4Xa1cCQMpdAVCCe905SQD8QJXe9LFRn3tFC3Gjp66LZ2frdnBctSYAcg94mtiptNu38NNGTwv+DVPAVCMV2z1Z61KgMwN0GUgdbxmprddCtdvHZV6XNkVFYJcRHedVIJsB/O8L8Au7PqO7b1t7aaW2lghfEuUNGdZzAYDVk84aLQCtStv3BLS237d2zQBMJYRNAeEXPtT+PpX/c7tuMwAWiKl+1gZc3xDSsBGUKwKnCrwyADaHKANg9aSzJgDoQoZ1WABg9aSzJgDoQoZ1WABg9aSzJgDoQoZ1WABg9aSzJgDoQoZ1eHEAYOXjt7Y4AOy2Nn/oMD0QABgdaa3QAtCquDLArnK0AIR39/w/O+O/1qaA54eKAGhNJXvSTgDsSSBbu7E3ALQKsPR2AmDhBAgAAfDva+L87wiKvQcQ+8uiUz0apmf8MOQqA2B0pLUiAGhDh3FcAGB0pLUiAGhDh3F858uiVQRiRGWyIgCYojWArwJgAFGZTCb/buBc9wGYxGXwVQAwRGlAHwXAgOIymBYADFEa0MdmAAb0SaZHVEAAjCj2HC8lAOYYlRF9EgAjij3HSwmAOUZlRJ8EwIhiz/FSAmCOURnRJwEwothzvFQSgDk6K5/wCggAvKZUFgUAVbjwzgoAvKZUFgUAVbjwzgoAvKZUFgUAVbjwzgoAvKZUFgUAVbjwzgoAvKZUFgUAVbjwzgoAvKZUFgUAVbjwzgoAvKZUFgUAVbjwzgoAvKZUFgUAVbjwzgoAvKZUFgUAVbjwzgoAvKZUFgUAVbjwzgoAvKZUFgUAVbjwzgoAvKZUFgUAVbjwzgoAvKZUFgUAVbjwzgoAvKZUFgUAVbjwzgoAvKZUFgUAVbjwzgoAvKZUFgUAVbjwzgoAvKZUFgUAVbjwzgoAvKZUFgUAVbjwzgoAvKZUFgUAVbjwzgoAvKZUFgUAVbjwzgoAvKZUFv8Cb0mVnq2vdi8AAAAASUVORK5CYII="
+	}
+	Material: 83908720, "Material::texture_RedBull.png", "" {
+		Version: 102
+		ShadingModel: "lambert"
+		MultiLayer: 0
+		Properties70:  {
+			P: "Emissive", "Vector3D", "Vector", "",0,0,0
+			P: "Ambient", "Vector3D", "Vector", "",0.2,0.2,0.2
+			P: "Diffuse", "Vector3D", "Vector", "",0.8,0.8,0.8
+			P: "Opacity", "double", "Number", "",1
+		}
+	}
+	Texture: 78372243, "Texture::texture_RedBull.png", "" {
+		Type: "TextureVideoClip"
+		Version: 202
+		TextureName: "Texture::texture_RedBull.png"
+		Media: "Video::texture_RedBull.png"
+		FileName: "C:\Users\kaani\OneDrive\Masaüstü\texture_RedBull.png"
+		RelativeFilename: "texture_RedBull.png"
+		ModelUVTranslation: 0,0
+		ModelUVScaling: 1,1
+		Texture_Alpha_Source: "None"
+		Cropping: 0,0,0,0
+	}
+	Video: 16952810, "Video::texture_RedBull.png", "Clip" {
+		Type: "Clip"
+		Properties70:  {
+			P: "Path", "KString", "XRefUrl", "", "C:\Users\kaani\OneDrive\Masaüstü\texture_RedBull.png"
+		}
+		UseMipMap: 0
+		Filename: "C:\Users\kaani\OneDrive\Masaüstü\texture_RedBull.png"
+		RelativeFilename: "texture_RedBull.png"
+		Content: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAIBJREFUOE9j/PDhw38BAQFGGO3ou+L//s0RjDB69erV/xkYGBhCQ0MZQTQ6gGukmQHYbEUWgzsV5uTrlpb/NY8fZ4TRBL2A7mf0MKHYAIJeIKSAkDxG9KHHBu0NgIU2eizA+ARdAFOI7nQYfwgYQMiJhOSx5jBCmlDyAimKsakFAKa20BH5ABuzAAAAAElFTkSuQmCC"
+	}
+	Material: 21562962, "Material::texture_Chips.png", "" {
+		Version: 102
+		ShadingModel: "lambert"
+		MultiLayer: 0
+		Properties70:  {
+			P: "Emissive", "Vector3D", "Vector", "",0,0,0
+			P: "Ambient", "Vector3D", "Vector", "",0.2,0.2,0.2
+			P: "Diffuse", "Vector3D", "Vector", "",0.8,0.8,0.8
+			P: "Opacity", "double", "Number", "",1
+		}
+	}
+	Texture: 45566678, "Texture::texture_Chips.png", "" {
+		Type: "TextureVideoClip"
+		Version: 202
+		TextureName: "Texture::texture_Chips.png"
+		Media: "Video::texture_Chips.png"
+		FileName: "C:\Users\kaani\OneDrive\Masaüstü\texture_Chips.png"
+		RelativeFilename: "texture_Chips.png"
+		ModelUVTranslation: 0,0
+		ModelUVScaling: 1,1
+		Texture_Alpha_Source: "None"
+		Cropping: 0,0,0,0
+	}
+	Video: 87880481, "Video::texture_Chips.png", "Clip" {
+		Type: "Clip"
+		Properties70:  {
+			P: "Path", "KString", "XRefUrl", "", "C:\Users\kaani\OneDrive\Masaüstü\texture_Chips.png"
+		}
+		UseMipMap: 0
+		Filename: "C:\Users\kaani\OneDrive\Masaüstü\texture_Chips.png"
+		RelativeFilename: "texture_Chips.png"
+		Content: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAHdJREFUOE9jZGBgYHh3iek/iEYHQnr/GHHJw+QYYZrP3rKE6zdWOw5mgxThMhwmD1bwMt0cw3bxmSfhBsAMhxkM4oPYIAuIcgGyATDNcBcQ8iOh8AEHEiUAZyjDnEjIhUSFAS4XwgNxNBYoiUQGBuqkA0rcQLELAMqdehEUWqKlAAAAAElFTkSuQmCC"
+	}
+	Material: 78959200, "Material::texture_Milk.png", "" {
+		Version: 102
+		ShadingModel: "lambert"
+		MultiLayer: 0
+		Properties70:  {
+			P: "Emissive", "Vector3D", "Vector", "",0,0,0
+			P: "Ambient", "Vector3D", "Vector", "",0.2,0.2,0.2
+			P: "Diffuse", "Vector3D", "Vector", "",0.8,0.8,0.8
+			P: "Opacity", "double", "Number", "",1
+		}
+	}
+	Texture: 13060261, "Texture::texture_Milk.png", "" {
+		Type: "TextureVideoClip"
+		Version: 202
+		TextureName: "Texture::texture_Milk.png"
+		Media: "Video::texture_Milk.png"
+		FileName: "C:\Users\kaani\OneDrive\Masaüstü\texture_Milk.png"
+		RelativeFilename: "texture_Milk.png"
+		ModelUVTranslation: 0,0
+		ModelUVScaling: 1,1
+		Texture_Alpha_Source: "None"
+		Cropping: 0,0,0,0
+	}
+	Video: 91732863, "Video::texture_Milk.png", "Clip" {
+		Type: "Clip"
+		Properties70:  {
+			P: "Path", "KString", "XRefUrl", "", "C:\Users\kaani\OneDrive\Masaüstü\texture_Milk.png"
+		}
+		UseMipMap: 0
+		Filename: "C:\Users\kaani\OneDrive\Masaüstü\texture_Milk.png"
+		RelativeFilename: "texture_Milk.png"
+		Content: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAKFJREFUOE9j/P///38GKGBkZGQkxIepheuxPfTh/9XNUgxvu74ygAxA56MbiNUAkOAhW364Ach8dA0YBrjstgJ7YbfLUbAB6HzaG0BqoGF4gZATCcnDow05CkHs69ev/9fQ0ADrB/FxGQSONpDkYTsBFDbFBhByOkpCYv/pxbDH9RjYBTA20QbA4h1kADKbaANg0YgeiEQbQKxCnLEw4AYAAOr+ehFPfAV/AAAAAElFTkSuQmCC"
+	}
 }
 
 ; Object connections
 ;------------------------------------------------------------------
 
 Connections:  {
-	C: "OO",51427462,0
-	C: "OO",58355205,51427462
-	C: "OO",83172172,51427462
-	C: "OP",10196712,83643612, "DiffuseColor"
-	C: "OO",47690358,10196712
-	C: "OP",5863885,13940135, "DiffuseColor"
-	C: "OO",81640894,5863885
-	C: "OP",54804190,70233698, "DiffuseColor"
-	C: "OO",85409605,54804190
-	C: "OP",32261063,83172172, "DiffuseColor"
-	C: "OO",89768210,32261063
+	C: "OO",77821968,0
+	C: "OO",4481599,77821968
+	C: "OO",11911653,77821968
+	C: "OP",60566093,64976063, "DiffuseColor"
+	C: "OO",9856647,60566093
+	C: "OP",24242610,88415082, "DiffuseColor"
+	C: "OO",36094503,24242610
+	C: "OP",18643126,95529363, "DiffuseColor"
+	C: "OO",25560282,18643126
+	C: "OP",29950017,11911653, "DiffuseColor"
+	C: "OO",43457413,29950017
+	C: "OP",34814802,30006396, "DiffuseColor"
+	C: "OO",60508771,34814802
+	C: "OP",78372243,83908720, "DiffuseColor"
+	C: "OO",16952810,78372243
+	C: "OP",45566678,21562962, "DiffuseColor"
+	C: "OO",87880481,45566678
+	C: "OP",13060261,78959200, "DiffuseColor"
+	C: "OO",91732863,13060261
 }
 
 ; Takes section
