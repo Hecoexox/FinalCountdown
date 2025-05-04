@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ItemInstance : MonoBehaviour
+public interface IInteractable
 {
-    public ItemData itemData;
+    void Interact(PlayerInteraction player);
 }

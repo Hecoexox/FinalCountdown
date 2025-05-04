@@ -2,10 +2,26 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "Item/ItemData")]
-public class ItemData : ScriptableObject
+public class Item : MonoBehaviour, IInteractable
 {
     public string itemName;
-    public GameObject itemPrefab;
-    public int maxStackCount;
+    private Pallet currentPallet;
+
+    public void SetPallet(Pallet pallet)
+    {
+        currentPallet = pallet;
+    }
+
+    public void Interact(PlayerInteraction player)
+    {
+        if (player.heldItem == null)
+        {
+            player.PickUpItem(gameObject);
+            if (currentPallet != null)
+            {
+                currentPallet.RemoveItem(gameObject);
+                currentPallet = null;
+            }
+        }
+    }
 }
