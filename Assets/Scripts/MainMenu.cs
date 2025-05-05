@@ -15,39 +15,63 @@ public class MainMenu : MonoBehaviour
     public GameObject settingsPanel;
     public GameObject creditsPanel;
 
+    public AudioClip clickSound;
+    private AudioSource audioSource;
+
+    void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
+
+    void PlayClickSound()
+    {
+        if (clickSound != null && audioSource != null)
+        {
+            audioSource.PlayOneShot(clickSound);
+        }
+    }
+
     public void NewGame()
     {
         Debug.Log("New Game");
+        PlayClickSound();
         //SceneManager.LoadScene("GameScene"); // sahne adýný kendi sahnene göre deðiþtir
     }
 
     public void ContinueGame()
     {
         Debug.Log("Continue Game");
+        PlayClickSound();
         //SceneManager.LoadScene(savedSceneIndex);
     }
 
     public void OpenSettings()
     {
+        PlayClickSound();
         settingsPanel.SetActive(true);
+        StartCoroutine(FadeIn(settingsPanel.GetComponent<CanvasGroup>(), 0.3f));
         SlideUIElementsDown();
     }
 
     public void CloseSettings()
     {
-        settingsPanel.SetActive(false);
+        PlayClickSound();
+        StartCoroutine(FadeOut(settingsPanel.GetComponent<CanvasGroup>(), 0.3f));
         SlideUIElementsUp();
     }
 
     public void OpenCredits()
     {
+        PlayClickSound();
         creditsPanel.SetActive(true);
+        StartCoroutine(FadeIn(creditsPanel.GetComponent<CanvasGroup>(), 0.3f));
         SlideUIElementsDown();
     }
 
     public void CloseCredits()
     {
-        creditsPanel.SetActive(false);
+        PlayClickSound();
+        StartCoroutine(FadeOut(creditsPanel.GetComponent<CanvasGroup>(), 0.3f));
         SlideUIElementsUp();
     }
 
@@ -145,9 +169,48 @@ public class MainMenu : MonoBehaviour
         quitButton.transform.localPosition = quitStart + offset;
     }
 
+    IEnumerator FadeIn(CanvasGroup canvasGroup, float duration)
+    {
+        float elapsed = 0f;
+        canvasGroup.alpha = 0f;
+        canvasGroup.interactable = true;
+        canvasGroup.blocksRaycasts = true;
+
+        while (elapsed < duration)
+        {
+            canvasGroup.alpha = Mathf.Lerp(0f, 1f, elapsed / duration);
+            elapsed += Time.deltaTime;
+            yield return null;
+        }
+
+        canvasGroup.alpha = 1f;
+    }
+
+    IEnumerator FadeOut(CanvasGroup canvasGroup, float duration)
+    {
+        float elapsed = 0f;
+        canvasGroup.interactable = false;
+        canvasGroup.blocksRaycasts = false;
+
+        while (elapsed < duration)
+        {
+            canvasGroup.alpha = Mathf.Lerp(1f, 0f, elapsed / duration);
+            elapsed += Time.deltaTime;
+            yield return null;
+        }
+
+        canvasGroup.alpha = 0f;
+        canvasGroup.gameObject.SetActive(false);
+    }
+
     public void QuitGame()
     {
-        Debug.Log("Quit game");
+        PlayClickSound();
         Application.Quit();
+#if UNITY_EDITOR
+    UnityEditor.EditorApplication.isPlaying = false; // Editörde çalýþmayý durdurur
+#else
+        Application.Quit(); // Build'de oyunu kapatýr
+#endif
     }
 }
