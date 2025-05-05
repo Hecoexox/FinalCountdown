@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
+    public GameObject blackBox;
     public GameObject title;
     public GameObject continueButton;
     public GameObject newGameButton;
@@ -87,6 +88,7 @@ public class MainMenu : MonoBehaviour
         float elapsed = 0f;
 
         // Baþlangýç pozisyonlarýný kaydet
+        Vector3 blackStart = blackBox.transform.localPosition;
         Vector3 titleStart = title.transform.localPosition;
         Vector3 continueStart = continueButton.transform.localPosition;
         Vector3 newGameStart = newGameButton.transform.localPosition;
@@ -102,6 +104,7 @@ public class MainMenu : MonoBehaviour
             float t = elapsed / duration;
             t = Mathf.SmoothStep(0, 1, t); // yumuþak geçiþ
 
+            blackBox.transform.localPosition = Vector3.Lerp(blackStart, blackStart + offset, t);
             title.transform.localPosition = Vector3.Lerp(titleStart, titleStart + offset, t);
             continueButton.transform.localPosition = Vector3.Lerp(continueStart, continueStart + offset, t);
             newGameButton.transform.localPosition = Vector3.Lerp(newGameStart, newGameStart + offset, t);
@@ -114,6 +117,7 @@ public class MainMenu : MonoBehaviour
         }
 
         // Pozisyonlarý kesin olarak hedefe oturt
+        blackBox.transform.localPosition = blackStart + offset;
         title.transform.localPosition = titleStart + offset;
         continueButton.transform.localPosition = continueStart + offset;
         newGameButton.transform.localPosition = newGameStart + offset;
@@ -134,6 +138,7 @@ public class MainMenu : MonoBehaviour
         float elapsed = 0f;
 
         // Baþlangýç pozisyonlarýný kaydet
+        Vector3 blackStart = blackBox.transform.localPosition;
         Vector3 titleStart = title.transform.localPosition;
         Vector3 continueStart = continueButton.transform.localPosition;
         Vector3 newGameStart = newGameButton.transform.localPosition;
@@ -149,6 +154,7 @@ public class MainMenu : MonoBehaviour
             float t = elapsed / duration;
             t = Mathf.SmoothStep(0, 1, t); // yumuþak geçiþ
 
+            blackBox.transform.localPosition = Vector3.Lerp(blackStart, blackStart + offset, t);
             title.transform.localPosition = Vector3.Lerp(titleStart, titleStart + offset, t);
             continueButton.transform.localPosition = Vector3.Lerp(continueStart, continueStart + offset, t);
             newGameButton.transform.localPosition = Vector3.Lerp(newGameStart, newGameStart + offset, t);
@@ -161,6 +167,7 @@ public class MainMenu : MonoBehaviour
         }
 
         // Pozisyonlarý kesin olarak hedefe oturt
+        blackBox.transform.localPosition = blackStart + offset;
         title.transform.localPosition = titleStart + offset;
         continueButton.transform.localPosition = continueStart + offset;
         newGameButton.transform.localPosition = newGameStart + offset;
