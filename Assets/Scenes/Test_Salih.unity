@@ -10028,7 +10028,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spotlight: {fileID: 634867922}
-  flashlightSound: {fileID: 8300000, guid: 1b59108648b8d894c8f8ba31e604fe5e, type: 3}
+  flashlightSound: {fileID: 8300000, guid: fc3bdf6a81df0814f9daed53db8e4ebd, type: 3}
 --- !u!82 &1116410671
 AudioSource:
   m_ObjectHideFlags: 0
