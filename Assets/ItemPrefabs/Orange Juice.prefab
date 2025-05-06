@@ -70,6 +70,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 799ae9861f1bb4f42ac0bbfd5e76a080, type: 3}
       insertIndex: -1
       addedObject: {fileID: 9072883767118216565}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 799ae9861f1bb4f42ac0bbfd5e76a080, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1278859012069943108}
   m_SourcePrefab: {fileID: 100100000, guid: 799ae9861f1bb4f42ac0bbfd5e76a080, type: 3}
 --- !u!1 &4590943945686694017 stripped
 GameObject:
@@ -111,3 +114,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: Orange Juice
+--- !u!114 &1278859012069943108
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4590943945686694017}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7941100a674b42c47b6aa32bfb574123, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 2

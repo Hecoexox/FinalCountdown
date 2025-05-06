@@ -70,6 +70,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 55ffc3fd479b1b445bca0f137b4017c1, type: 3}
       insertIndex: -1
       addedObject: {fileID: 5989416999884587753}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 55ffc3fd479b1b445bca0f137b4017c1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7479325754368506764}
   m_SourcePrefab: {fileID: 100100000, guid: 55ffc3fd479b1b445bca0f137b4017c1, type: 3}
 --- !u!1 &6271587300265797401 stripped
 GameObject:
@@ -110,3 +113,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: Milk
+--- !u!114 &7479325754368506764
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6271587300265797401}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7941100a674b42c47b6aa32bfb574123, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 2
