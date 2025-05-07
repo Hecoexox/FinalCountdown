@@ -6,10 +6,16 @@ public class Item : MonoBehaviour, IInteractable
 {
     public string itemName;
     private Pallet currentPallet;
+    private Box currentBox;
 
     public void SetPallet(Pallet pallet)
     {
         currentPallet = pallet;
+    }
+
+    public void SetBox(Box box)
+    {
+        currentBox = box;
     }
 
     public void Interact(PlayerInteraction player)
@@ -21,6 +27,12 @@ public class Item : MonoBehaviour, IInteractable
             {
                 currentPallet.RemoveItem(gameObject);
                 currentPallet = null;
+            }
+
+            if (currentBox != null)
+            {
+                currentBox.RemoveItem(gameObject);
+                currentBox = null;
             }
         }
     }

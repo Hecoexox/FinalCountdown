@@ -36,6 +36,11 @@ public class PlayerInteraction : MonoBehaviour
                     {
                         interactable.Interact(this);
                     }
+
+                    if (interactable is Box)
+                    {
+                        interactable.Interact(this);
+                    }
                 }
                 else
                 {

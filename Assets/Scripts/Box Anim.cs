@@ -8,11 +8,11 @@ public class BoxAnim : MonoBehaviour
     public float rotationSpeed = 2f; // Flaplarýn dönme hýzýný ayarlamak için
 
     private bool isAnimating = false;
+    public bool Animate = false;
 
     void Update()
     {
-        // K tuþuna basýldýðýnda animasyonu baþlat
-        if (Input.GetKeyDown(KeyCode.K) && !isAnimating)
+        if (Animate && !isAnimating)
         {
             StartCoroutine(AnimateFlaps());
         }
@@ -23,16 +23,14 @@ public class BoxAnim : MonoBehaviour
         isAnimating = true;
 
         // Ýlk iki flap'ýn kapanmasý (dýþarýya doðru açýlacak þekilde)
-        StartCoroutine(RotateFlap(flap1, new Vector3(0, 0, -180))); // flap1 sola doðru
-        yield return new WaitForSeconds(0.5f); // Biraz bekle
+        StartCoroutine(RotateFlap(flap1, new Vector3(0, 0, -180))); // flap1 sola doðru     
 
         StartCoroutine(RotateFlap(flap2, new Vector3(0, 0, 180))); // flap2 sola doðru
         yield return new WaitForSeconds(0.5f); // Biraz bekle
 
         // Son iki flap'ýn kapanmasý (dýþarýya doðru açýlacak þekilde)
         StartCoroutine(RotateFlap(flap3, new Vector3(0, 90, 180))); // flap3 sola doðru
-        yield return new WaitForSeconds(0.5f); // Biraz bekle
-
+        
         StartCoroutine(RotateFlap(flap4, new Vector3(0, 90, -180))); // flap4 sola doðru
 
         yield return new WaitForSeconds(1f); // Animasyon bitene kadar bekle
