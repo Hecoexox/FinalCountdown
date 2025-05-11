@@ -11,7 +11,7 @@ public class MoveItem : MonoBehaviour
     void Start()
     {
         // Hedef pozisyonu belirle
-        targetPosition = transform.position + Vector3.left * 3;
+        targetPosition = transform.position + Vector3.right * 3;
 
         // Baþlangýçta layer'ý Default yap
         gameObject.layer = LayerMask.NameToLayer("Default");
