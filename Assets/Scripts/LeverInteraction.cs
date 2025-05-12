@@ -1,29 +1,68 @@
+using UnityEngine;
 using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 
-using UnityEngine;
-
-public class MouseClickSimple : MonoBehaviour
+public class LeverInteraction : MonoBehaviour
 {
     public AudioSource audioSource;
-    public float activationDistance = 2f;
+    public AudioClip declineSound;
+    public float interactionDistance = 3f;
+    public Transform leverHandle; // Topuz kısmı
+    public float tiltAngle = 30f; // Güncellendi
+    public float tiltSpeed = 5f;
+
     private Transform player;
+    private Quaternion originalRotation;
+    private bool isTilting = false;
 
     void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player").transform;
+        player = GameObject.FindWithTag("Player").transform;
+        if (leverHandle != null)
+        {
+            originalRotation = leverHandle.localRotation;
+        }
     }
 
     void Update()
     {
-        if (player == null || audioSource == null) return;
+        float distance = Vector3.Distance(transform.position, player.position);
 
-        float distance = Vector3.Distance(player.position, transform.position);
-
-        if (distance <= activationDistance && Input.GetKeyDown(KeyCode.E))
+        if (distance <= interactionDistance && Input.GetKeyDown(KeyCode.E))
         {
-            audioSource.PlayOneShot(audioSource.clip);
+            if (!audioSource.isPlaying)
+            {
+                audioSource.PlayOneShot(declineSound);
+            }
+
+            if (leverHandle != null && !isTilting)
+            {
+                StartCoroutine(TiltLever());
+            }
         }
+    }
+
+    IEnumerator TiltLever()
+    {
+        isTilting = true;
+
+        Quaternion downRotation = originalRotation * Quaternion.Euler(tiltAngle, 0, 0);
+        float t = 0f;
+
+        while (t < 1f)
+        {
+            t += Time.deltaTime * tiltSpeed;
+            leverHandle.localRotation = Quaternion.Slerp(originalRotation, downRotation, t);
+            yield return null;
+        }
+
+        t = 0f;
+        while (t < 1f)
+        {
+            t += Time.deltaTime * tiltSpeed;
+            leverHandle.localRotation = Quaternion.Slerp(downRotation, originalRotation, t);
+            yield return null;
+        }
+
+        isTilting = false;
     }
 }
