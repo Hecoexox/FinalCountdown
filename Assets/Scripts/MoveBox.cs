@@ -12,7 +12,7 @@ public class MoveBox : MonoBehaviour
 
     void Start()
     {
-        targetPosition = transform.position + Vector3.forward * 7;
+        targetPosition = transform.position + Vector3.right * 7;
         gameObject.layer = LayerMask.NameToLayer("Default");
     }
 
@@ -25,7 +25,7 @@ public class MoveBox : MonoBehaviour
             if (Vector3.Distance(transform.position, targetPosition) < 0.01f)
             {
                 isMoving = false;
-                targetPosition2 = transform.position + Vector3.right * 8;
+                targetPosition2 = transform.position + Vector3.back * 6;
                 gameObject.layer = LayerMask.NameToLayer("Water");
             }
         }
