@@ -6,13 +6,13 @@ public class LeverInteraction : MonoBehaviour
     public AudioSource audioSource;
     public AudioClip declineSound;
     public float interactionDistance = 3f;
-    public Transform leverHandle; // Topuz kısmı
-    public float tiltAngle = 30f; // Güncellendi
+    public Transform leverHandle;
+    public float tiltAngle = 30f;
     public float tiltSpeed = 5f;
 
     private Transform player;
     private Quaternion originalRotation;
-    private bool isTilting = false;
+    private Coroutine tiltCoroutine;
 
     void Start()
     {
@@ -29,22 +29,22 @@ public class LeverInteraction : MonoBehaviour
 
         if (distance <= interactionDistance && Input.GetKeyDown(KeyCode.E))
         {
-            if (!audioSource.isPlaying)
-            {
-                audioSource.PlayOneShot(declineSound);
-            }
+            // Ses her basışta çalsın
+            audioSource.PlayOneShot(declineSound);
 
-            if (leverHandle != null && !isTilting)
+            // Tilt coroutine çalışıyorsa durdur, yeniden başlat
+            if (leverHandle != null)
             {
-                StartCoroutine(TiltLever());
+                if (tiltCoroutine != null)
+                    StopCoroutine(tiltCoroutine);
+
+                tiltCoroutine = StartCoroutine(TiltLever());
             }
         }
     }
 
     IEnumerator TiltLever()
     {
-        isTilting = true;
-
         Quaternion downRotation = originalRotation * Quaternion.Euler(tiltAngle, 0, 0);
         float t = 0f;
 
@@ -62,7 +62,5 @@ public class LeverInteraction : MonoBehaviour
             leverHandle.localRotation = Quaternion.Slerp(downRotation, originalRotation, t);
             yield return null;
         }
-
-        isTilting = false;
     }
 }

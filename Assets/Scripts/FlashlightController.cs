@@ -19,5 +19,11 @@ public class FlashlightController : MonoBehaviour
             flashlightAudioSource.PlayOneShot(toggleSound);
         }
     }
+    public void ForceTurnOff()
+    {
+        isOn = false;
+        flashlight.SetActive(false);
+    }
+
 }
     
