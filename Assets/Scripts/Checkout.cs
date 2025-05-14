@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Checkout : MonoBehaviour
 {
+    private List<string> receivedItems = new List<string>();
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Item"))
@@ -11,8 +13,45 @@ public class Checkout : MonoBehaviour
             Item item = other.GetComponent<Item>();
             if (item != null)
             {
-                Debug.Log(item.itemName);
+                receivedItems.Add(item.itemName);
+                Debug.Log("Alýnan item: " + item.itemName);
+
+                if (receivedItems.Count == 3)
+                {
+                    CheckOrder();
+                }
             }
         }
+    }
+
+    private void CheckOrder()
+    {
+        List<string> tempOrder = new List<string>(Customer.orderList);
+        bool allMatch = true;
+
+        foreach (string item in receivedItems)
+        {
+            if (tempOrder.Contains(item))
+            {
+                tempOrder.Remove(item);
+            }
+            else
+            {
+                allMatch = false;
+                break;
+            }
+        }
+
+        if (allMatch && tempOrder.Count == 0)
+        {
+            Debug.Log(" Sipariþ doðru! Yeni sipariþ oluþturuluyor...");
+            Customer.Instance.CreateNewOrder(); // Yeni sipariþ
+        }
+        else
+        {
+            Debug.Log(" Yanlýþ sipariþ!");
+        }
+
+        receivedItems.Clear(); // Listeyi sýfýrla
     }
 }
