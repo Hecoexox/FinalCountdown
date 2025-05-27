@@ -7,7 +7,6 @@ public class MainMenu : MonoBehaviour
 {
     public GameObject blackBox;
     public GameObject title;
-    public GameObject continueButton;
     public GameObject newGameButton;
     public GameObject settingsButton;
     public GameObject creditsButton;
@@ -37,13 +36,6 @@ public class MainMenu : MonoBehaviour
         Debug.Log("New Game");
         PlayClickSound();
         //SceneManager.LoadScene("GameScene"); // sahne adýný kendi sahnene göre deðiþtir
-    }
-
-    public void ContinueGame()
-    {
-        Debug.Log("Continue Game");
-        PlayClickSound();
-        //SceneManager.LoadScene(savedSceneIndex);
     }
 
     public void OpenSettings()
@@ -90,7 +82,6 @@ public class MainMenu : MonoBehaviour
         // Baþlangýç pozisyonlarýný kaydet
         Vector3 blackStart = blackBox.transform.localPosition;
         Vector3 titleStart = title.transform.localPosition;
-        Vector3 continueStart = continueButton.transform.localPosition;
         Vector3 newGameStart = newGameButton.transform.localPosition;
         Vector3 settingsStart = settingsButton.transform.localPosition;
         Vector3 creditsStart = creditsButton.transform.localPosition;
@@ -106,7 +97,6 @@ public class MainMenu : MonoBehaviour
 
             blackBox.transform.localPosition = Vector3.Lerp(blackStart, blackStart + offset, t);
             title.transform.localPosition = Vector3.Lerp(titleStart, titleStart + offset, t);
-            continueButton.transform.localPosition = Vector3.Lerp(continueStart, continueStart + offset, t);
             newGameButton.transform.localPosition = Vector3.Lerp(newGameStart, newGameStart + offset, t);
             settingsButton.transform.localPosition = Vector3.Lerp(settingsStart, settingsStart + offset, t);
             creditsButton.transform.localPosition = Vector3.Lerp(creditsStart, creditsStart + offset, t);
@@ -119,7 +109,6 @@ public class MainMenu : MonoBehaviour
         // Pozisyonlarý kesin olarak hedefe oturt
         blackBox.transform.localPosition = blackStart + offset;
         title.transform.localPosition = titleStart + offset;
-        continueButton.transform.localPosition = continueStart + offset;
         newGameButton.transform.localPosition = newGameStart + offset;
         settingsButton.transform.localPosition = settingsStart + offset;
         creditsButton.transform.localPosition = creditsStart + offset;
@@ -140,7 +129,6 @@ public class MainMenu : MonoBehaviour
         // Baþlangýç pozisyonlarýný kaydet
         Vector3 blackStart = blackBox.transform.localPosition;
         Vector3 titleStart = title.transform.localPosition;
-        Vector3 continueStart = continueButton.transform.localPosition;
         Vector3 newGameStart = newGameButton.transform.localPosition;
         Vector3 settingsStart = settingsButton.transform.localPosition;
         Vector3 creditsStart = creditsButton.transform.localPosition;
@@ -156,7 +144,6 @@ public class MainMenu : MonoBehaviour
 
             blackBox.transform.localPosition = Vector3.Lerp(blackStart, blackStart + offset, t);
             title.transform.localPosition = Vector3.Lerp(titleStart, titleStart + offset, t);
-            continueButton.transform.localPosition = Vector3.Lerp(continueStart, continueStart + offset, t);
             newGameButton.transform.localPosition = Vector3.Lerp(newGameStart, newGameStart + offset, t);
             settingsButton.transform.localPosition = Vector3.Lerp(settingsStart, settingsStart + offset, t);
             creditsButton.transform.localPosition = Vector3.Lerp(creditsStart, creditsStart + offset, t);
@@ -169,7 +156,6 @@ public class MainMenu : MonoBehaviour
         // Pozisyonlarý kesin olarak hedefe oturt
         blackBox.transform.localPosition = blackStart + offset;
         title.transform.localPosition = titleStart + offset;
-        continueButton.transform.localPosition = continueStart + offset;
         newGameButton.transform.localPosition = newGameStart + offset;
         settingsButton.transform.localPosition = settingsStart + offset;
         creditsButton.transform.localPosition = creditsStart + offset;
