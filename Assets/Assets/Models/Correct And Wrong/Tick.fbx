@@ -1,0 +1,807 @@
+; FBX 7.3.0 project file
+; Created by the Blockbench FBX Exporter
+; ----------------------------------------------------
+; 
+
+FBXHeaderExtension:  {
+	FBXHeaderVersion: 1003
+	FBXVersion: 7300
+	EncryptionType: 0
+	CreationTimeStamp:  {
+		Version: 1000
+		Year: 2025
+		Month: 5
+		Day: 27
+		Hour: 23
+		Minute: 20
+		Second: 41
+		Millisecond: 540
+	}
+	Creator: "Blockbench 4.12.4"
+	SceneInfo: "SceneInfo::GlobalInfo", "UserData" {
+		Type: "UserData"
+		Version: 100
+		MetaData:  {
+			Version: 100
+			Title: ""
+			Subject: ""
+			Author: ""
+			Keywords: ""
+			Revision: ""
+			Comment: ""
+		}
+		Properties70:  {
+			P: "DocumentUrl", "KString", "Url", "", "C:\Users\Blockbench\foobar.fbx"
+			P: "SrcDocumentUrl", "KString", "Url", "", "C:\Users\Blockbench\foobar.fbx"
+			P: "Original", "Compound", "", ""
+			P: "Original|ApplicationVendor", "KString", "", "", "Blockbench"
+			P: "Original|ApplicationName", "KString", "", "", "Blockbench FBX Exporter"
+			P: "Original|ApplicationVersion", "KString", "", "", "4.12.4"
+			P: "Original|DateTime_GMT", "DateTime", "", "", "01/01/1970 00:00:00.000"
+			P: "Original|FileName", "KString", "", "", "/foobar.fbx"
+			P: "LastSaved", "Compound", "", ""
+			P: "LastSaved|ApplicationVendor", "KString", "", "", "Blockbench"
+			P: "LastSaved|ApplicationName", "KString", "", "", "Blockbench FBX Exporter"
+			P: "LastSaved|ApplicationVersion", "KString", "", "", "4.12.4"
+			P: "LastSaved|DateTime_GMT", "DateTime", "", "", "01/01/1970 00:00:00.000"
+			P: "Original|ApplicationNativeFile", "KString", "", "", ""
+		}
+	}
+}
+FileId: "iVFoobar"
+CreationTime: "2025-05-27 20:20:41:540"
+Creator: "Made with Blockbench"
+GlobalSettings:  {
+	Version: 1000
+	Properties70:  {
+		P: "UpAxis", "int", "Integer", "",1
+		P: "UpAxisSign", "int", "Integer", "",1
+		P: "FrontAxis", "int", "Integer", "",2
+		P: "FrontAxisSign", "int", "Integer", "",1
+		P: "CoordAxis", "int", "Integer", "",0
+		P: "CoordAxisSign", "int", "Integer", "",1
+		P: "OriginalUpAxis", "int", "Integer", "",-1
+		P: "OriginalUpAxisSign", "int", "Integer", "",1
+		P: "UnitScaleFactor", "double", "Number", "",1
+		P: "OriginalUnitScaleFactor", "double", "Number", "",1
+		P: "AmbientColor", "ColorRGB", "Color", "",0,0,0
+		P: "DefaultCamera", "KString", "", "", "Producer Perspective"
+		P: "TimeMode", "enum", "", "",0
+		P: "TimeSpanStart", "KTime", "Time", "",0
+		P: "TimeSpanStop", "KTime", "Time", "",46186158000
+		P: "CustomFrameRate", "double", "Number", "",24
+	}
+}
+
+; Documents Description
+;------------------------------------------------------------------
+
+Documents:  {
+	Count: 1
+	Document: 1708963369 {
+		Scene: "Scene"
+		Properties70:  {
+			P: "SourceObject", "object", "", ""
+			P: "ActiveAnimStackName", "KString", "", "", ""
+		}
+		RootNode: 0
+	}
+}
+
+; Document References
+;------------------------------------------------------------------
+
+References: 
+
+; Object definitions
+;------------------------------------------------------------------
+
+Definitions:  {
+	Version: 100
+	Count: 42
+	ObjectType: "GlobalSettings" {
+		Count: 1
+	}
+	ObjectType: "Model" {
+		Count: 1
+		PropertyTemplate: "FbxNode" {
+			Properties70:  {
+				P: "QuaternionInterpolate", "enum", "", "",0
+				P: "RotationOffset", "Vector3D", "Vector", "",0,0,0
+				P: "RotationPivot", "Vector3D", "Vector", "",0,0,0
+				P: "ScalingOffset", "Vector3D", "Vector", "",0,0,0
+				P: "ScalingPivot", "Vector3D", "Vector", "",0,0,0
+				P: "TranslationActive", "bool", "", "",0
+				P: "TranslationMin", "Vector3D", "Vector", "",0,0,0
+				P: "TranslationMax", "Vector3D", "Vector", "",0,0,0
+				P: "TranslationMinX", "bool", "", "",0
+				P: "TranslationMinY", "bool", "", "",0
+				P: "TranslationMinZ", "bool", "", "",0
+				P: "TranslationMaxX", "bool", "", "",0
+				P: "TranslationMaxY", "bool", "", "",0
+				P: "TranslationMaxZ", "bool", "", "",0
+				P: "RotationOrder", "enum", "", "",5
+				P: "RotationSpaceForLimitOnly", "bool", "", "",0
+				P: "RotationStiffnessX", "double", "Number", "",0
+				P: "RotationStiffnessY", "double", "Number", "",0
+				P: "RotationStiffnessZ", "double", "Number", "",0
+				P: "AxisLen", "double", "Number", "",10
+				P: "PreRotation", "Vector3D", "Vector", "",0,0,0
+				P: "PostRotation", "Vector3D", "Vector", "",0,0,0
+				P: "RotationActive", "bool", "", "",0
+				P: "RotationMin", "Vector3D", "Vector", "",0,0,0
+				P: "RotationMax", "Vector3D", "Vector", "",0,0,0
+				P: "RotationMinX", "bool", "", "",0
+				P: "RotationMinY", "bool", "", "",0
+				P: "RotationMinZ", "bool", "", "",0
+				P: "RotationMaxX", "bool", "", "",0
+				P: "RotationMaxY", "bool", "", "",0
+				P: "RotationMaxZ", "bool", "", "",0
+				P: "InheritType", "enum", "", "",0
+				P: "ScalingActive", "bool", "", "",0
+				P: "ScalingMin", "Vector3D", "Vector", "",0,0,0
+				P: "ScalingMax", "Vector3D", "Vector", "",1,1,1
+				P: "ScalingMinX", "bool", "", "",0
+				P: "ScalingMinY", "bool", "", "",0
+				P: "ScalingMinZ", "bool", "", "",0
+				P: "ScalingMaxX", "bool", "", "",0
+				P: "ScalingMaxY", "bool", "", "",0
+				P: "ScalingMaxZ", "bool", "", "",0
+				P: "GeometricTranslation", "Vector3D", "Vector", "",0,0,0
+				P: "GeometricRotation", "Vector3D", "Vector", "",0,0,0
+				P: "GeometricScaling", "Vector3D", "Vector", "",1,1,1
+				P: "MinDampRangeX", "double", "Number", "",0
+				P: "MinDampRangeY", "double", "Number", "",0
+				P: "MinDampRangeZ", "double", "Number", "",0
+				P: "MaxDampRangeX", "double", "Number", "",0
+				P: "MaxDampRangeY", "double", "Number", "",0
+				P: "MaxDampRangeZ", "double", "Number", "",0
+				P: "MinDampStrengthX", "double", "Number", "",0
+				P: "MinDampStrengthY", "double", "Number", "",0
+				P: "MinDampStrengthZ", "double", "Number", "",0
+				P: "MaxDampStrengthX", "double", "Number", "",0
+				P: "MaxDampStrengthY", "double", "Number", "",0
+				P: "MaxDampStrengthZ", "double", "Number", "",0
+				P: "PreferedAngleX", "double", "Number", "",0
+				P: "PreferedAngleY", "double", "Number", "",0
+				P: "PreferedAngleZ", "double", "Number", "",0
+				P: "LookAtProperty", "object", "", ""
+				P: "UpVectorProperty", "object", "", ""
+				P: "Show", "bool", "", "",1
+				P: "NegativePercentShapeSupport", "bool", "", "",1
+				P: "DefaultAttributeIndex", "int", "Integer", "",-1
+				P: "Freeze", "bool", "", "",0
+				P: "LODBox", "bool", "", "",0
+				P: "Lcl Translation", "Lcl Translation", "", "A",0,0,0
+				P: "Lcl Rotation", "Lcl Rotation", "", "A",0,0,0
+				P: "Lcl Scaling", "Lcl Scaling", "", "A",1,1,1
+				P: "Visibility", "Visibility", "", "A",1
+				P: "Visibility Inheritance", "Visibility Inheritance", "", "",1
+			}
+		}
+	}
+	ObjectType: "Geometry" {
+		Count: 1
+		PropertyTemplate: "FbxMesh" {
+			Properties70:  {
+				P: "Color", "ColorRGB", "Color", "",0.8,0.8,0.8
+				P: "BBoxMin", "Vector3D", "Vector", "",0,0,0
+				P: "BBoxMax", "Vector3D", "Vector", "",0,0,0
+				P: "Primary Visibility", "bool", "", "",1
+				P: "Casts Shadows", "bool", "", "",1
+				P: "Receive Shadows", "bool", "", "",1
+			}
+		}
+	}
+	ObjectType: "Material" {
+		Count: 13
+		PropertyTemplate: "FbxSurfaceLambert" {
+			Properties70:  {
+				P: "ShadingModel", "KString", "", "", "Lambert"
+				P: "MultiLayer", "bool", "", "",0
+				P: "EmissiveColor", "Color", "", "A",0,0,0
+				P: "EmissiveFactor", "Number", "", "A",1
+				P: "AmbientColor", "Color", "", "A",0.2,0.2,0.2
+				P: "AmbientFactor", "Number", "", "A",1
+				P: "DiffuseColor", "Color", "", "A",0.8,0.8,0.8
+				P: "DiffuseFactor", "Number", "", "A",1
+				P: "Bump", "Vector3D", "Vector", "",0,0,0
+				P: "NormalMap", "Vector3D", "Vector", "",0,0,0
+				P: "BumpFactor", "double", "Number", "",1
+				P: "TransparentColor", "Color", "", "A",0,0,0
+				P: "TransparencyFactor", "Number", "", "A",0
+				P: "DisplacementColor", "ColorRGB", "Color", "",0,0,0
+				P: "DisplacementFactor", "double", "Number", "",1
+				P: "VectorDisplacementColor", "ColorRGB", "Color", "",0,0,0
+				P: "VectorDisplacementFactor", "double", "Number", "",1
+			}
+		}
+	}
+	ObjectType: "Texture" {
+		Count: 13
+		PropertyTemplate: "FbxFileTexture" {
+			Properties70:  {
+				P: "TextureTypeUse", "enum", "", "",0
+				P: "Texture alpha", "Number", "", "A",1
+				P: "CurrentMappingType", "enum", "", "",0
+				P: "WrapModeU", "enum", "", "",0
+				P: "WrapModeV", "enum", "", "",0
+				P: "UVSwap", "bool", "", "",0
+				P: "PremultiplyAlpha", "bool", "", "",1
+				P: "Translation", "Vector", "", "A",0,0,0
+				P: "Rotation", "Vector", "", "A",0,0,0
+				P: "Scaling", "Vector", "", "A",1,1,1
+				P: "TextureRotationPivot", "Vector3D", "Vector", "",0,0,0
+				P: "TextureScalingPivot", "Vector3D", "Vector", "",0,0,0
+				P: "CurrentTextureBlendMode", "enum", "", "",1
+				P: "UVSet", "KString", "", "", "default"
+				P: "UseMaterial", "bool", "", "",0
+				P: "UseMipMap", "bool", "", "",0
+			}
+		}
+	}
+	ObjectType: "Video" {
+		Count: 13
+		PropertyTemplate: "FbxVideo" {
+			Properties70:  {
+				P: "ImageSequence", "bool", "", "",0
+				P: "ImageSequenceOffset", "int", "Integer", "",0
+				P: "FrameRate", "double", "Number", "",0
+				P: "LastFrame", "int", "Integer", "",0
+				P: "Width", "int", "Integer", "",0
+				P: "Height", "int", "Integer", "",0
+				P: "Path", "KString", "XRefUrl", "", ""
+				P: "StartFrame", "int", "Integer", "",0
+				P: "StopFrame", "int", "Integer", "",0
+				P: "PlaySpeed", "double", "Number", "",0
+				P: "Offset", "KTime", "Time", "",0
+				P: "InterlaceMode", "enum", "", "",0
+				P: "FreeRunning", "bool", "", "",0
+				P: "Loop", "bool", "", "",0
+				P: "AccessMode", "enum", "", "",0
+			}
+		}
+	}
+}
+
+; Object properties
+;------------------------------------------------------------------
+
+Objects:  {
+	Geometry: 49182582, "Geometry::Tick", "Mesh" {
+		Vertices: *48 {
+			a: 3.125,50,3.125,3.125,50,-3.125,3.125,-1.734723475976807e-16,3.125,3.125,-1.734723475976807e-16,-3.125,-3.125,50,3.125,-3.125,50,-3.125,-3.125,-1.734723475976807e-16,3.125,-3.125,-1.734723475976807e-16,-3.125,3.125,6.25,3.125,3.125,6.25,-3.125,-3.125,6.25,-3.125,-3.125,6.25,3.125,21.875000000000004,-1.734723475976807e-16,-3.125,21.875000000000004,6.25,3.125,21.875000000000004,6.25,-3.125,21.875000000000004,-1.734723475976807e-16,3.125
+		}
+		PolygonVertexIndex: *56 {
+			a: 12,14,13,-16,6,11,10,-8,4,0,1,-6,3,2,6,-8,2,8,11,-7,7,10,9,-4,0,8,9,-2,1,9,10,-6,5,10,11,-5,4,11,8,-1,14,12,3,-10,13,14,9,-9,15,13,8,-3,12,15,2,-4
+		}
+		GeometryVersion: 124
+		LayerElementNormal: 0 {
+			Version: 101
+			Name: ""
+			MappingInformationType: "ByPolygon"
+			ReferenceInformationType: "Direct"
+			Normals: *42 {
+				a: 1,0,0,-1,0,0,0,1,0,0,-1,0,0,0,1,0,0,-1,1,0,0,0,0,-1,-1,0,0,0,0,1,0,0,-1,0,1,0,0,0,1,0,-1,0
+			}
+		}
+		LayerElementUV: 0 {
+			Version: 101
+			Name: ""
+			MappingInformationType: "ByPolygonVertex"
+			ReferenceInformationType: "Direct"
+			UV: *112 {
+				a: 0.0625,0.9375,0.0625,0.96875,0,0.96875,0,0.9375,0.0625,0.9375,0.0625,0.96875,0,0.96875,0,0.9375,0,0.9375,0.0625,0.9375,0.0625,1,0,1,0.0625,0.9375,0.0625,1,0,1,0,0.9375,0.0625,0.9375,0.0625,0.96875,0,0.96875,0,0.9375,0.0625,0.9375,0.0625,0.96875,0,0.96875,0,0.9375,0,1,0,0.96875,0.0625,0.96875,0.0625,1,0,1,0,0.96875,0.0625,0.96875,0.0625,1,0,1,0,0.96875,0.0625,0.96875,0.0625,1,0,1,0,0.96875,0.0625,0.96875,0.0625,1,0.03125,0.9765625,0.03125,0.96875,0.0390625,0.96875,0.0390625,0.9765625,0.0234375,0.9765625,0.0234375,0.984375,0.015625,0.984375,0.015625,0.9765625,0.0078125,0.96875,0.0078125,0.9765625,0,0.9765625,0,0.96875,0.0234375,0.9609375,0.0234375,0.96875,0.015625,0.96875,0.015625,0.9609375
+			}
+		}
+		LayerElementMaterial: 0 {
+			Version: 101
+			Name: ""
+			MappingInformationType: "AllSame"
+			ReferenceInformationType: "IndexToDirect"
+			Materials: *1 {
+				a: 0
+			}
+		}
+		Layer: 0 {
+			Version: 100
+			LayerElement:  {
+				Type: "LayerElementNormal"
+				TypedIndex: 0
+			}
+			LayerElement:  {
+				Type: "LayerElementMaterial"
+				TypedIndex: 0
+			}
+			LayerElement:  {
+				Type: "LayerElementUV"
+				TypedIndex: 0
+			}
+		}
+	}
+	Model: 18411950, "Model::Tick", "Mesh" {
+		Version: 232
+		Properties70:  {
+			P: "RotationActive", "bool", "", "",1
+			P: "InheritType", "enum", "", "",1
+			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
+			P: "Lcl Translation", "Lcl Translation", "", "A",0,0,0
+			P: "RotationPivot", "Vector3D", "Vector", "",0,0,0
+			P: "Lcl Rotation", "Lcl Rotation", "", "A",0,0,45
+			P: "RotationOrder", "enum", "", "",5
+			P: "DefaultAttributeIndex", "int", "Integer", "",0
+		}
+		Shading: Y
+		Culling: "CullingOff"
+	}
+	Material: 45961237, "Material::texture_OrangeJuice.png", "" {
+		Version: 102
+		ShadingModel: "lambert"
+		MultiLayer: 0
+		Properties70:  {
+			P: "Emissive", "Vector3D", "Vector", "",0,0,0
+			P: "Ambient", "Vector3D", "Vector", "",0.2,0.2,0.2
+			P: "Diffuse", "Vector3D", "Vector", "",0.8,0.8,0.8
+			P: "Opacity", "double", "Number", "",1
+		}
+	}
+	Texture: 75602305, "Texture::texture_OrangeJuice.png", "" {
+		Type: "TextureVideoClip"
+		Version: 202
+		TextureName: "Texture::texture_OrangeJuice.png"
+		Media: "Video::texture_OrangeJuice.png"
+		FileName: "C:\Users\kaani\OneDrive\Masaüstü\texture_OrangeJuice.png"
+		RelativeFilename: "texture_OrangeJuice.png"
+		ModelUVTranslation: 0,0
+		ModelUVScaling: 1,1
+		Texture_Alpha_Source: "None"
+		Cropping: 0,0,0,0
+	}
+	Video: 96977659, "Video::texture_OrangeJuice.png", "Clip" {
+		Type: "Clip"
+		Properties70:  {
+			P: "Path", "KString", "XRefUrl", "", "C:\Users\kaani\OneDrive\Masaüstü\texture_OrangeJuice.png"
+		}
+		UseMipMap: 0
+		Filename: "C:\Users\kaani\OneDrive\Masaüstü\texture_OrangeJuice.png"
+		RelativeFilename: "texture_OrangeJuice.png"
+		Content: "iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAJRJREFUWEdjjI6O/s9AAli6dCkjCcoJKmW8v8iNJAcoxu0aZg7Y++oXSSHgLMZG3RAYdcCAh8BoLkAviFrcX6MUHjU7RcF8ahdAMEsIFkQD7gBql3zoZTMjei5Q2uGDoobuDqB2SUeoNsIIgZHnAPSCiNZxjpEIB9wBhBIJreWpWreT49hRB4yGwGgIjIbAaAiMhgAAEAFPIRzM3CoAAAAASUVORK5CYII="
+	}
+	Material: 60593020, "Material::texture_GrapeJuice.png", "" {
+		Version: 102
+		ShadingModel: "lambert"
+		MultiLayer: 0
+		Properties70:  {
+			P: "Emissive", "Vector3D", "Vector", "",0,0,0
+			P: "Ambient", "Vector3D", "Vector", "",0.2,0.2,0.2
+			P: "Diffuse", "Vector3D", "Vector", "",0.8,0.8,0.8
+			P: "Opacity", "double", "Number", "",1
+		}
+	}
+	Texture: 33386967, "Texture::texture_GrapeJuice.png", "" {
+		Type: "TextureVideoClip"
+		Version: 202
+		TextureName: "Texture::texture_GrapeJuice.png"
+		Media: "Video::texture_GrapeJuice.png"
+		FileName: "C:\Users\kaani\OneDrive\Masaüstü\texture_GrapeJuice.png"
+		RelativeFilename: "texture_GrapeJuice.png"
+		ModelUVTranslation: 0,0
+		ModelUVScaling: 1,1
+		Texture_Alpha_Source: "None"
+		Cropping: 0,0,0,0
+	}
+	Video: 1403421, "Video::texture_GrapeJuice.png", "Clip" {
+		Type: "Clip"
+		Properties70:  {
+			P: "Path", "KString", "XRefUrl", "", "C:\Users\kaani\OneDrive\Masaüstü\texture_GrapeJuice.png"
+		}
+		UseMipMap: 0
+		Filename: "C:\Users\kaani\OneDrive\Masaüstü\texture_GrapeJuice.png"
+		RelativeFilename: "texture_GrapeJuice.png"
+		Content: "iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAJRJREFUWEdjjI6O/s9AAli6dCkjCcoJKmXsi19NkgOKFoYOMwfsffWLpBBwFmOjbgiMOmDAQ2A0F6AXRMYsASiFx9k/G8B8ahdAMEsIFkQD7gBql3zoZTMjei64WLoRRQ3dHUDtko5QbYQRAiPPAegFEa3jHCMRDrgDCCUSWstTtW4nx7GjDhgNgdEQGA2B0RAYDQEAvG1RIalTnQIAAAAASUVORK5CYII="
+	}
+	Material: 34928035, "Material::texture_AppleJuice.png", "" {
+		Version: 102
+		ShadingModel: "lambert"
+		MultiLayer: 0
+		Properties70:  {
+			P: "Emissive", "Vector3D", "Vector", "",0,0,0
+			P: "Ambient", "Vector3D", "Vector", "",0.2,0.2,0.2
+			P: "Diffuse", "Vector3D", "Vector", "",0.8,0.8,0.8
+			P: "Opacity", "double", "Number", "",1
+		}
+	}
+	Texture: 71562716, "Texture::texture_AppleJuice.png", "" {
+		Type: "TextureVideoClip"
+		Version: 202
+		TextureName: "Texture::texture_AppleJuice.png"
+		Media: "Video::texture_AppleJuice.png"
+		FileName: "C:\Users\kaani\OneDrive\Masaüstü\texture_AppleJuice.png"
+		RelativeFilename: "texture_AppleJuice.png"
+		ModelUVTranslation: 0,0
+		ModelUVScaling: 1,1
+		Texture_Alpha_Source: "None"
+		Cropping: 0,0,0,0
+	}
+	Video: 80169432, "Video::texture_AppleJuice.png", "Clip" {
+		Type: "Clip"
+		Properties70:  {
+			P: "Path", "KString", "XRefUrl", "", "C:\Users\kaani\OneDrive\Masaüstü\texture_AppleJuice.png"
+		}
+		UseMipMap: 0
+		Filename: "C:\Users\kaani\OneDrive\Masaüstü\texture_AppleJuice.png"
+		RelativeFilename: "texture_AppleJuice.png"
+		Content: "iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAJRJREFUWEdjjI6O/s9AAli6dCkjCcoJKmU8FBtLkgPsFi8eZg7Y++oXSSHgLMZG3RAYdcCAh8BoLkAviNKZmFAKj5n//oH51C6AYJYQLIgG3AHULvnQy2ZG9FzAWpyMoobuDqB2SUeoNsIIgZHnAPSCiNZxjpEIB9wBhBIJreWpWreT49hRB4yGwGgIjIbAaAiMhgAAlddQIb4bp/8AAAAASUVORK5CYII="
+	}
+	Material: 77054911, "Material::texture_Pallet.png", "" {
+		Version: 102
+		ShadingModel: "lambert"
+		MultiLayer: 0
+		Properties70:  {
+			P: "Emissive", "Vector3D", "Vector", "",0,0,0
+			P: "Ambient", "Vector3D", "Vector", "",0.2,0.2,0.2
+			P: "Diffuse", "Vector3D", "Vector", "",0.8,0.8,0.8
+			P: "Opacity", "double", "Number", "",1
+		}
+	}
+	Texture: 50687553, "Texture::texture_Pallet.png", "" {
+		Type: "TextureVideoClip"
+		Version: 202
+		TextureName: "Texture::texture_Pallet.png"
+		Media: "Video::texture_Pallet.png"
+		FileName: "C:\Users\kaani\OneDrive\Masaüstü\texture_Pallet.png"
+		RelativeFilename: "texture_Pallet.png"
+		ModelUVTranslation: 0,0
+		ModelUVScaling: 1,1
+		Texture_Alpha_Source: "None"
+		Cropping: 0,0,0,0
+	}
+	Video: 56342418, "Video::texture_Pallet.png", "Clip" {
+		Type: "Clip"
+		Properties70:  {
+			P: "Path", "KString", "XRefUrl", "", "C:\Users\kaani\OneDrive\Masaüstü\texture_Pallet.png"
+		}
+		UseMipMap: 0
+		Filename: "C:\Users\kaani\OneDrive\Masaüstü\texture_Pallet.png"
+		RelativeFilename: "texture_Pallet.png"
+		Content: "iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAAXNSR0IArs4c6QAAAmtJREFUeF7tmsFRxDAMRbOdUQIHKqABKuBEBTRABRwogc7YyQ7ZMZk4fpK+4ySYEwOS/PX0bYg3l8+3h59hGIan1+/L1/vz7fvHl49L5OdT7ljL85Vq8eSnOWMvazVCjeaAKQBEG6f5VQDQxdfiJrjRWk0cEBVfEh2FkuZXcYACQLTG1GQJZhUAygnVrlUFgOIQPLQDFABqT36qX8UBCvGHdkBUfOngUgCu6gAFAEUNAmq3W4CIV8RUAaA4BA/tAAUAxXRJjSoOIAuXYg7tgK3ElyCS31dxgAKAokYzAGThvcSs3pYoRSoOxtIFzHiTZNWMrsEUdlQDsDaai98MgEqwug4CoFh0yb60ruKSNPd8gQCo7Wut59nbFG4TAFRcGuc9h0pPlgiAR/A8J90C1mZKTUT0IQBWwXNBYwNRAF4NJXhNAEQmps5FABSLbv1XoDT5+42Q9/NACmUSEgVA17PGIQcsfVBKF1oCQHNJXKqNxM9jzAA8i4w5kUMwtya1+ZpmMwDradwd8Iu/OyB5+cK7jZby+hkQpGk+A4LrVUv3OsEMwHoIrp3gylpesugKyUvXK2rLvM0dkD4YeRudv8UWGZAZgFf0XvPMWyC6b3fnAPJCZMRie538/WmQAEibaOGA+YVKqjk6HPMWaDXR9F9ppQb02SBxifVeITdFMl0SQyEhAEtbIPpCNRU4xUWtnluv2RbYpQOItazCSU3ihu6AhJIK6ljyzxlACncHEL+CGCvItCQZFJBwC8k6gBY4ehz6K3D0Jtf0dwBnni7prTuAUDpzTHfAmadLeusOIJTOHNMdcObpkt7+vQOutjigjC/qs58AAAAASUVORK5CYII="
+	}
+	Material: 79422148, "Material::texture_Scaffolding", "" {
+		Version: 102
+		ShadingModel: "lambert"
+		MultiLayer: 0
+		Properties70:  {
+			P: "Emissive", "Vector3D", "Vector", "",0,0,0
+			P: "Ambient", "Vector3D", "Vector", "",0.2,0.2,0.2
+			P: "Diffuse", "Vector3D", "Vector", "",0.8,0.8,0.8
+			P: "Opacity", "double", "Number", "",1
+		}
+	}
+	Texture: 84813064, "Texture::texture_Scaffolding", "" {
+		Type: "TextureVideoClip"
+		Version: 202
+		TextureName: "Texture::texture_Scaffolding"
+		Media: "Video::texture_Scaffolding"
+		FileName: ""
+		RelativeFilename: ""
+		ModelUVTranslation: 0,0
+		ModelUVScaling: 1,1
+		Texture_Alpha_Source: "None"
+		Cropping: 0,0,0,0
+	}
+	Video: 39650126, "Video::texture_Scaffolding", "Clip" {
+		Type: "Clip"
+		Properties70:  {
+			P: "Path", "KString", "XRefUrl", "", "texture_Scaffolding"
+		}
+		UseMipMap: 0
+		Filename: ""
+		RelativeFilename: ""
+		Content: "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"
+	}
+	Material: 88610205, "Material::texture_RedBull", "" {
+		Version: 102
+		ShadingModel: "lambert"
+		MultiLayer: 0
+		Properties70:  {
+			P: "Emissive", "Vector3D", "Vector", "",0,0,0
+			P: "Ambient", "Vector3D", "Vector", "",0.2,0.2,0.2
+			P: "Diffuse", "Vector3D", "Vector", "",0.8,0.8,0.8
+			P: "Opacity", "double", "Number", "",1
+		}
+	}
+	Texture: 35648877, "Texture::texture_RedBull", "" {
+		Type: "TextureVideoClip"
+		Version: 202
+		TextureName: "Texture::texture_RedBull"
+		Media: "Video::texture_RedBull"
+		FileName: ""
+		RelativeFilename: ""
+		ModelUVTranslation: 0,0
+		ModelUVScaling: 1,1
+		Texture_Alpha_Source: "None"
+		Cropping: 0,0,0,0
+	}
+	Video: 70009489, "Video::texture_RedBull", "Clip" {
+		Type: "Clip"
+		Properties70:  {
+			P: "Path", "KString", "XRefUrl", "", "texture_RedBull"
+		}
+		UseMipMap: 0
+		Filename: ""
+		RelativeFilename: ""
+		Content: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAIBJREFUOE9j/PDhw38BAQFGGO3ou+L//s0RjDB69erV/xkYGBhCQ0MZQTQ6gGukmQHYbEUWgzsV5uTrlpb/NY8fZ4TRBL2A7mf0MKHYAIJeIKSAkDxG9KHHBu0NgIU2eizA+ARdAFOI7nQYfwgYQMiJhOSx5jBCmlDyAimKsakFAKa20BH5ABuzAAAAAElFTkSuQmCC"
+	}
+	Material: 68926811, "Material::texture_Chips", "" {
+		Version: 102
+		ShadingModel: "lambert"
+		MultiLayer: 0
+		Properties70:  {
+			P: "Emissive", "Vector3D", "Vector", "",0,0,0
+			P: "Ambient", "Vector3D", "Vector", "",0.2,0.2,0.2
+			P: "Diffuse", "Vector3D", "Vector", "",0.8,0.8,0.8
+			P: "Opacity", "double", "Number", "",1
+		}
+	}
+	Texture: 89815437, "Texture::texture_Chips", "" {
+		Type: "TextureVideoClip"
+		Version: 202
+		TextureName: "Texture::texture_Chips"
+		Media: "Video::texture_Chips"
+		FileName: ""
+		RelativeFilename: ""
+		ModelUVTranslation: 0,0
+		ModelUVScaling: 1,1
+		Texture_Alpha_Source: "None"
+		Cropping: 0,0,0,0
+	}
+	Video: 97889215, "Video::texture_Chips", "Clip" {
+		Type: "Clip"
+		Properties70:  {
+			P: "Path", "KString", "XRefUrl", "", "texture_Chips"
+		}
+		UseMipMap: 0
+		Filename: ""
+		RelativeFilename: ""
+		Content: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAHdJREFUOE9jZGBgYHh3iek/iEYHQnr/GHHJw+QYYZrP3rKE6zdWOw5mgxThMhwmD1bwMt0cw3bxmSfhBsAMhxkM4oPYIAuIcgGyATDNcBcQ8iOh8AEHEiUAZyjDnEjIhUSFAS4XwgNxNBYoiUQGBuqkA0rcQLELAMqdehEUWqKlAAAAAElFTkSuQmCC"
+	}
+	Material: 15330528, "Material::texture_Milk", "" {
+		Version: 102
+		ShadingModel: "lambert"
+		MultiLayer: 0
+		Properties70:  {
+			P: "Emissive", "Vector3D", "Vector", "",0,0,0
+			P: "Ambient", "Vector3D", "Vector", "",0.2,0.2,0.2
+			P: "Diffuse", "Vector3D", "Vector", "",0.8,0.8,0.8
+			P: "Opacity", "double", "Number", "",1
+		}
+	}
+	Texture: 62958160, "Texture::texture_Milk", "" {
+		Type: "TextureVideoClip"
+		Version: 202
+		TextureName: "Texture::texture_Milk"
+		Media: "Video::texture_Milk"
+		FileName: ""
+		RelativeFilename: ""
+		ModelUVTranslation: 0,0
+		ModelUVScaling: 1,1
+		Texture_Alpha_Source: "None"
+		Cropping: 0,0,0,0
+	}
+	Video: 72242792, "Video::texture_Milk", "Clip" {
+		Type: "Clip"
+		Properties70:  {
+			P: "Path", "KString", "XRefUrl", "", "texture_Milk"
+		}
+		UseMipMap: 0
+		Filename: ""
+		RelativeFilename: ""
+		Content: "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAKFJREFUOE9j/P///38GKGBkZGQkxIepheuxPfTh/9XNUgxvu74ygAxA56MbiNUAkOAhW364Ach8dA0YBrjstgJ7YbfLUbAB6HzaG0BqoGF4gZATCcnDow05CkHs69ev/9fQ0ADrB/FxGQSONpDkYTsBFDbFBhByOkpCYv/pxbDH9RjYBTA20QbA4h1kADKbaANg0YgeiEQbQKxCnLEw4AYAAOr+ehFPfAV/AAAAAElFTkSuQmCC"
+	}
+	Material: 79232433, "Material::texture_ConveyorWall", "" {
+		Version: 102
+		ShadingModel: "lambert"
+		MultiLayer: 0
+		Properties70:  {
+			P: "Emissive", "Vector3D", "Vector", "",0,0,0
+			P: "Ambient", "Vector3D", "Vector", "",0.2,0.2,0.2
+			P: "Diffuse", "Vector3D", "Vector", "",0.8,0.8,0.8
+			P: "Opacity", "double", "Number", "",1
+		}
+	}
+	Texture: 57957976, "Texture::texture_ConveyorWall", "" {
+		Type: "TextureVideoClip"
+		Version: 202
+		TextureName: "Texture::texture_ConveyorWall"
+		Media: "Video::texture_ConveyorWall"
+		FileName: ""
+		RelativeFilename: ""
+		ModelUVTranslation: 0,0
+		ModelUVScaling: 1,1
+		Texture_Alpha_Source: "None"
+		Cropping: 0,0,0,0
+	}
+	Video: 26335985, "Video::texture_ConveyorWall", "Clip" {
+		Type: "Clip"
+		Properties70:  {
+			P: "Path", "KString", "XRefUrl", "", "texture_ConveyorWall"
+		}
+		UseMipMap: 0
+		Filename: ""
+		RelativeFilename: ""
+		Content: "iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAAXNSR0IArs4c6QAAAcRJREFUeF7tWtGxhCAMPBuyA5uxDb9tw2bswIZ8k5njhocnJwnBIHs/jnMkhs1uCGg3z/P+Evymaep8H+E9xzX54NhxbP4Fz3EAAMCAowQ4TLrLRlUCJI9hGPZ1XT/Xvu/3bdu6s+uyLJ+aNI6jei0wBwAxgUAoMXl6lkkASsrBHACQQMn0W5QANVWPaYQ4q0DzABRWgL1VoHkGNA8AJFB6FdBA3J0PVLcK5DrMkACgkZCYz6pPc3KApQKAq+R+X58a7C27wdwtaJUA+PqtYQKpzArHn0qA2CAFwB1s/DoFCv8v2QxFAZCiywVA+twU+58MoGLkzvVcpq7ecwEwwwA3gasTDgHiApCSQelYMODstZYrgndIQJrVFHswAAzw3g77myFI4N0IoQbc0AekFDHp2MPLx3Av8HgGfOvDCdVmakAIgE+pJjrB2E4sFwBSnWraHz5U8DciuQBwPsOr5sSu+j4A8E0CV53VOA4AxIpgjRlNjTnKgFRnNY4HAJBA8N1ejTSWxAwJQAKtS0CinyfYqn+MbB0kAGA9Q9rxgQHaCFv3DwZYz5B2fGCANsLW/YMB1jOkHR8YoI2wdf9ggPUMacf3B21JvJtOq+NdAAAAAElFTkSuQmCC"
+	}
+	Material: 86652269, "Material::texture_ConveyorCorner", "" {
+		Version: 102
+		ShadingModel: "lambert"
+		MultiLayer: 0
+		Properties70:  {
+			P: "Emissive", "Vector3D", "Vector", "",0,0,0
+			P: "Ambient", "Vector3D", "Vector", "",0.2,0.2,0.2
+			P: "Diffuse", "Vector3D", "Vector", "",0.8,0.8,0.8
+			P: "Opacity", "double", "Number", "",1
+		}
+	}
+	Texture: 91586948, "Texture::texture_ConveyorCorner", "" {
+		Type: "TextureVideoClip"
+		Version: 202
+		TextureName: "Texture::texture_ConveyorCorner"
+		Media: "Video::texture_ConveyorCorner"
+		FileName: ""
+		RelativeFilename: ""
+		ModelUVTranslation: 0,0
+		ModelUVScaling: 1,1
+		Texture_Alpha_Source: "None"
+		Cropping: 0,0,0,0
+	}
+	Video: 10864566, "Video::texture_ConveyorCorner", "Clip" {
+		Type: "Clip"
+		Properties70:  {
+			P: "Path", "KString", "XRefUrl", "", "texture_ConveyorCorner"
+		}
+		UseMipMap: 0
+		Filename: ""
+		RelativeFilename: ""
+		Content: "iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAAXNSR0IArs4c6QAAAzRJREFUeF7tmT1vE0EQhu8qkEhPpEh8iCISQv4DLiicMoWldFBh0bohVOloLCEBjXtTpQS5oEHCpf+AlYYCIZAihT5ISWX0rpjT5OzLzeyd9/Y26+aieGd35tl35ma9aa/XWyaKz2w2S2n4+WhkbLeOjrL/Sabidhc/XqnWx/y3H31QrXedT+l0OhU5MB6Ps3kIAgK58/Be8vfnbxWEPIBbO7sSbmbM5en3ZgBg8TwEAoDvAEH64dCggNYA4BCgAtpJaeA0rtUACAKvBVoAXqXA7uP95dvRS1UMSAUA6Ha7y/l8LipIBy9em1rz6eO7TDkono2nQBUAEmoU+M7d7eT0z5l/AKRvAR4sKYCCk4Cg3cfTqxSoAkAaeH5cK/uAdQrodDqiHoLbLhaLKzXAFmJdduJGaJMAJpOJATkYDNLe2Xvz92z7MLUFrIGTUis8HA7FdlQDxAZJklAw6xRQBEAzv+3YDAAmkEKweQ1e52CjCiDHoAQtALKlALS7AMnDplEFaJ1eN35TAFAPUAvq8LFoDtOJ4Us6YuLdjm6NntTtfTn5tdx/cj/r/rhdqwFw50mSEuJBAnj29EQSuxmDIyydzYNRgAYAkULqBANAkwJcKkEB0AYDaFobglf2GnTyFrAtgnUpIL8+b4UbAYDXHoLDDx1oX9G6llXGKgrgTVB+HS8AwKkyCFUAlMHd9PdX8hc5yRUgXbwqABenvsJOsOkaAMdaD0CqlKJx/KhcdS6t/UqBqyJnm3uC/LUaCt/FwWdThOGLbW8iBbFSA6oCwKWH9ENXaqg7D958TY73tswvQgSADmTS+WzGeQkAgeAYHAH8P5rb7KzUxgsFPP92bpovSoEbp4AIICogoBSQFh8ahz4gmBTQBk/jgwHAA+E/mvLLUFzG9vt9cyWHJyBEAAVFsHWtcB0KsE0jW7uVRsh2oryUi1IA6YDCx1OArwmIaIiq+KGxrXUhWwVEAIxAVEBMgVgDwiiCRZV4XSMUZBGMAAoIBK0ASQNSBkAyR51jam2E6nTM1VwRgCvSvq4TFeDrzrjyKyrAFWlf14kK8HVnXPkVFeCKtK/rRAX4ujOu/LrxCvgHYoRzfVvLWfEAAAAASUVORK5CYII="
+	}
+	Material: 65689531, "Material::texture_ConveyorBelt", "" {
+		Version: 102
+		ShadingModel: "lambert"
+		MultiLayer: 0
+		Properties70:  {
+			P: "Emissive", "Vector3D", "Vector", "",0,0,0
+			P: "Ambient", "Vector3D", "Vector", "",0.2,0.2,0.2
+			P: "Diffuse", "Vector3D", "Vector", "",0.8,0.8,0.8
+			P: "Opacity", "double", "Number", "",1
+		}
+	}
+	Texture: 71569088, "Texture::texture_ConveyorBelt", "" {
+		Type: "TextureVideoClip"
+		Version: 202
+		TextureName: "Texture::texture_ConveyorBelt"
+		Media: "Video::texture_ConveyorBelt"
+		FileName: ""
+		RelativeFilename: ""
+		ModelUVTranslation: 0,0
+		ModelUVScaling: 1,1
+		Texture_Alpha_Source: "None"
+		Cropping: 0,0,0,0
+	}
+	Video: 96679327, "Video::texture_ConveyorBelt", "Clip" {
+		Type: "Clip"
+		Properties70:  {
+			P: "Path", "KString", "XRefUrl", "", "texture_ConveyorBelt"
+		}
+		UseMipMap: 0
+		Filename: ""
+		RelativeFilename: ""
+		Content: "iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAAXNSR0IArs4c6QAAAl5JREFUeF7tm8FtwzAMReN7N/Ix3aIDeKYM0C2aYzbqvYGMCBAI2yS/vmwrZS9JYJGSnr5o0laHcRz/LhV/j8djuF6vs4/7/T6kz/Q7fc+fa+5Lu/wdHUru22s/JADTNHnt5va32+1SAighWBxKcBYbdhs6AGSAWS2IbbY5jQKQSaCDR/qSNnQFHDkZBEgTAGVAk/LOgBjBF5nwLgqwAqgNvgGAQODQLfC2CrAsDCP/sPSjtWmqgDIAyrtDACBkoNrqWq7PCrA0XGuTUmHE/jQKQAYvbbyFTNoOR4FfzANqIMhiyOLrTNkiPQhaAXgV0Ar0oQCseUAuuy1wvW26AoDEGg1IVwC0ySDXAwDjfoxI09NvxIDXs0dE4ppNbAGPFCXNpafCGvF0PWeCcRs0Po6PGNA6Blhku1UNoncBT79o1an1AZWyjGpQG9he191l6dJKIApAbFpAcd0GmcGoawDeUlauXKvSFlEIpICjcgdkgppNAPCsZo4BHhtm9qitJnI9FOBZzVDAKyX1QIstIAgwcwlkzy++F/CWpYw84Ovnd34j9f35MZTft84WIBPW3kFAQRAZiLSxAmD0teUDArC2SuXZQHlWUJ4ZtALwpsxysk0UsAcAbeAsZZxWAcjZQQQaVA6/lQIQKQWA1+Ho/IRXHnreCoYZuBYEETkjiwk9EgsFNFQAsoo1NqdTQM1kEFsIwFZHawmQNRFCJlFjcxiAmkEzbQMAk2byZf1/IXa/qL/mCkAHtpddAGCT/vdbgA20tT/6Fmg9YLb/AMAm2pu/UEBvK8YebyiATbQ3f0/sdHB9UKlBTQAAAABJRU5ErkJggg=="
+	}
+	Material: 80618301, "Material::texture_Crate", "" {
+		Version: 102
+		ShadingModel: "lambert"
+		MultiLayer: 0
+		Properties70:  {
+			P: "Emissive", "Vector3D", "Vector", "",0,0,0
+			P: "Ambient", "Vector3D", "Vector", "",0.2,0.2,0.2
+			P: "Diffuse", "Vector3D", "Vector", "",0.8,0.8,0.8
+			P: "Opacity", "double", "Number", "",1
+		}
+	}
+	Texture: 91817030, "Texture::texture_Crate", "" {
+		Type: "TextureVideoClip"
+		Version: 202
+		TextureName: "Texture::texture_Crate"
+		Media: "Video::texture_Crate"
+		FileName: ""
+		RelativeFilename: ""
+		ModelUVTranslation: 0,0
+		ModelUVScaling: 1,1
+		Texture_Alpha_Source: "None"
+		Cropping: 0,0,0,0
+	}
+	Video: 53880893, "Video::texture_Crate", "Clip" {
+		Type: "Clip"
+		Properties70:  {
+			P: "Path", "KString", "XRefUrl", "", "texture_Crate"
+		}
+		UseMipMap: 0
+		Filename: ""
+		RelativeFilename: ""
+		Content: "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"
+	}
+	Material: 30370256, "Material::texture_Box", "" {
+		Version: 102
+		ShadingModel: "lambert"
+		MultiLayer: 0
+		Properties70:  {
+			P: "Emissive", "Vector3D", "Vector", "",0,0,0
+			P: "Ambient", "Vector3D", "Vector", "",0.2,0.2,0.2
+			P: "Diffuse", "Vector3D", "Vector", "",0.8,0.8,0.8
+			P: "Opacity", "double", "Number", "",1
+		}
+	}
+	Texture: 69557651, "Texture::texture_Box", "" {
+		Type: "TextureVideoClip"
+		Version: 202
+		TextureName: "Texture::texture_Box"
+		Media: "Video::texture_Box"
+		FileName: ""
+		RelativeFilename: ""
+		ModelUVTranslation: 0,0
+		ModelUVScaling: 1,1
+		Texture_Alpha_Source: "None"
+		Cropping: 0,0,0,0
+	}
+	Video: 77409038, "Video::texture_Box", "Clip" {
+		Type: "Clip"
+		Properties70:  {
+			P: "Path", "KString", "XRefUrl", "", "texture_Box"
+		}
+		UseMipMap: 0
+		Filename: ""
+		RelativeFilename: ""
+		Content: "iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAAAAXNSR0IArs4c6QAABIlJREFUeF7tnDGS00AQReWTQBXpRpyDgHtwHu5BwDmINt0qOAnULhYFZuVu9bS+v6VHQmDN9Nf/T+3RSN7Tty+ffk4D/95//HxSzJGpkzkmOtXnOaJj9vT5S3jVk57HPv//9t1DyZfvT4/THNzSHGuOKYk48KA/AERX8WuQOAIQnUeUdfViiOZ1/ZwO4JqMSBcd4MJoOsAK8hy/AlbI59BpmugAdADuAo7cCugAdAA6AB0gsZvHPsA+MWEfYJ+5ps+KNQBrANYA6ctlhwfu7isgehZwtJ2+iFnJo9xIROYxbvaYqBaf/+vA6evjj6H3AT48vDnU8/O9AdQSXtR2l0zLXNWR4SNz8HVwfhYQmXzt8+hljqWxmZc8Il0jc8xjoxp7//xlDbDl2zwA4I0QAHjns7k6ANjcYu8CAOCdz+bqdgNAxSnuAs53AbdeBFbCm8cQ4oh7BreBY/L/Hx3tSQDMxU5gRwCVW8nL+/BMcJljOs7nSHO0PQtY+zXyGgD8MkiP3s0XgfMpX+simR0/dvZq8ABAzbfdjGoDoOLI3wsyOkDFwfExLQCMy5gmAOhwcf0cLQBEq/NIVvREkTVA5GD98zYA1t4FzJLXhJvpEnUrjjnyZreBAOABXNsbQXQAj0DXqgg7QGbrtLITSAdYG9U2x19dA2Q3VwBgm3AUswKAwmXjGm0AjJwjt4Ej7o2NbQFgTMLv0ZlbvMwxHVqONEcKgGijJ/NufrSYVNQ4UrDZc00DwKParKX3dZwUgI6rfMneTBe6Nva+YutTKwdgpJMsnXZmOzka22fpfc0EAOe/VXxfsfWpBQAAWP5tYKa1Ko+J2nhlRzK729l3zXnNRAegA/h1gMo1wl1AxbXgl0HK9n70VlyLb3xU6nFwZgu285jKaY10gLletFtZ0eU+JvVCSGe4W+4DuJvtqA8AHFMRagIAodmOpQDAMRWhpjQA1zRlFmAdL31EG0FC33ZTKgVA19lmF5OVekdcwVd8uhwjByDqJB0nxRx5B6QA5GVxpMoBAFA5bVoHAEyDUckCAJXTpnUAwDQYlSwAUDltWgcATINRyQIAldOmdQDANBiVLABQOW1aBwBMg1HJAgCV06Z1AMA0GJUsAFA5bVoHAEyDUckCAJXTpnUAwDQYlSwAUDltWgcATINRyQIAldOmdQDANBiVLABQOW1aBwBMg1HJAgCV06Z1AMA0GJUsAFA5bVoHAEyDUckCAJXTpnUAwDQYlSwAUDltWgcATINRyQIAldOmdQDANBiVLABQOW1aBwBMg1HJAgCV06Z1AMA0GJUsAFA5bVoHAEyDUckCAJXTpnUAwDQYlSwAUDltWgcATINRyQIAldOmdQDANBiVLABQOW1aBwBMg1HJAgCV06Z1AMA0GJUsAFA5bVoHAEyDUckCAJXTpnUAwDQYlSwAUDltWgcATINRyQIAldOmdQDANBiVLABQOW1aBwBMg1HJAgCV06Z1AMA0GJUsAFA5bVoHAEyDUckCAJXTpnUAwDQYlSwAUDltWgcATINRyQIAldOmdQDANBiVrF9hSkbbQLMcugAAAABJRU5ErkJggg=="
+	}
+}
+
+; Object connections
+;------------------------------------------------------------------
+
+Connections:  {
+	C: "OO",18411950,0
+	C: "OO",49182582,18411950
+	C: "OP",75602305,45961237, "DiffuseColor"
+	C: "OO",96977659,75602305
+	C: "OP",33386967,60593020, "DiffuseColor"
+	C: "OO",1403421,33386967
+	C: "OP",71562716,34928035, "DiffuseColor"
+	C: "OO",80169432,71562716
+	C: "OP",50687553,77054911, "DiffuseColor"
+	C: "OO",56342418,50687553
+	C: "OP",84813064,79422148, "DiffuseColor"
+	C: "OO",39650126,84813064
+	C: "OP",35648877,88610205, "DiffuseColor"
+	C: "OO",70009489,35648877
+	C: "OP",89815437,68926811, "DiffuseColor"
+	C: "OO",97889215,89815437
+	C: "OP",62958160,15330528, "DiffuseColor"
+	C: "OO",72242792,62958160
+	C: "OP",57957976,79232433, "DiffuseColor"
+	C: "OO",26335985,57957976
+	C: "OP",91586948,86652269, "DiffuseColor"
+	C: "OO",10864566,91586948
+	C: "OP",71569088,65689531, "DiffuseColor"
+	C: "OO",96679327,71569088
+	C: "OP",91817030,80618301, "DiffuseColor"
+	C: "OO",53880893,91817030
+	C: "OP",69557651,30370256, "DiffuseColor"
+	C: "OO",77409038,69557651
+}
+
+; Takes section
+;------------------------------------------------------------------
+
+Takes:  {
+	Current: ""
+}
