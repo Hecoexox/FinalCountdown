@@ -4,7 +4,23 @@ using UnityEngine;
 
 public class Checkout : MonoBehaviour
 {
+    public GameObject Correct;
+    public GameObject Wrong;
+
+    public Material Red;
+    public Material Green;
+    public Material White;
+
+    public AudioSource successAudio;
+    public AudioSource failAudio;
+
     private List<string> receivedItems = new List<string>();
+
+    void Start()
+    {
+        SetMaterial(Correct, White);
+        SetMaterial(Wrong, White);
+    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -44,14 +60,39 @@ public class Checkout : MonoBehaviour
 
         if (allMatch && tempOrder.Count == 0)
         {
-            Debug.Log(" Sipariþ doðru! Yeni sipariþ oluþturuluyor...");
-            Customer.Instance.CreateNewOrder(); // Yeni sipariþ
+            Debug.Log("Sipariþ doðru! Yeni sipariþ oluþturuluyor...");
+            StartCoroutine(ShowFeedback(Correct, Green));
+            Customer.Instance.CreateNewOrder();
         }
         else
         {
-            Debug.Log(" Yanlýþ sipariþ!");
+            Debug.Log("Yanlýþ sipariþ!");
+            StartCoroutine(ShowFeedback(Wrong, Red));
         }
 
-        receivedItems.Clear(); // Listeyi sýfýrla
+        receivedItems.Clear();
+    }
+
+    private void SetMaterial(GameObject obj, Material mat)
+    {
+        Renderer rend = obj.GetComponent<Renderer>();
+        if (rend != null)
+        {
+            rend.material = mat;
+        }
+    }
+
+    private IEnumerator ShowFeedback(GameObject obj, Material mat)
+    {
+        SetMaterial(obj, mat);
+
+        // Ses efektini çal
+        if (mat == Green && successAudio != null)
+            successAudio.Play();
+        else if (mat == Red && failAudio != null)
+            failAudio.Play();
+
+        yield return new WaitForSeconds(2f);
+        SetMaterial(obj, White);
     }
 }
