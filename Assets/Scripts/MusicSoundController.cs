@@ -10,6 +10,12 @@ public class MusicSoundController : MonoBehaviour
 
     [Header("Sounds")]
     public AudioSource soundSource;
+    public AudioSource soundSource1;
+    public AudioSource soundSource2;
+    public AudioSource soundSource3;
+    public AudioSource soundSource4;
+    public AudioSource soundSource5;
+    public AudioSource soundSource6;
 
     [Header("UI Sliders")]
     public Slider soundSlider;
