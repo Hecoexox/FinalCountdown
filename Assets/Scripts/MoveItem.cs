@@ -11,9 +11,9 @@ public class MoveItem : MonoBehaviour
     void Start()
     {
         // Hedef pozisyonu belirle
-        targetPosition = transform.position + Vector3.right * 3;
+        targetPosition = transform.position + Vector3.left * 3;
 
-        // Baþlangýçta layer'ý Default yap
+        // Baï¿½langï¿½ï¿½ta layer'ï¿½ Default yap
         gameObject.layer = LayerMask.NameToLayer("Default");
     }
 
@@ -24,15 +24,15 @@ public class MoveItem : MonoBehaviour
             // Hareket et
             transform.position = Vector3.MoveTowards(transform.position, targetPosition, speed * Time.deltaTime);
 
-            // Layer'ý Default olarak ayarla
+            // Layer'ï¿½ Default olarak ayarla
             gameObject.layer = LayerMask.NameToLayer("Default");
 
-            // Hedefe ulaþtýysa hareketi durdur
+            // Hedefe ulaï¿½tï¿½ysa hareketi durdur
             if (transform.position == targetPosition)
             {
                 isMoving = false;
 
-                // Layer'ý Water olarak deðiþtir
+                // Layer'ï¿½ Water olarak deï¿½iï¿½tir
                 gameObject.layer = LayerMask.NameToLayer("Water");
             }
         }

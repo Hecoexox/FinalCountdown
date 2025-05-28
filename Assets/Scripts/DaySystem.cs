@@ -31,6 +31,10 @@ public class DaySystem : MonoBehaviour
 
     private int currentCross = 0;
 
+    [Header("Customer Timer UI")]
+    public Image timerCircle;
+    public TextMeshProUGUI timerText;
+
     void Awake()
     {
         Instance = this;
@@ -60,6 +64,11 @@ public class DaySystem : MonoBehaviour
         if (customerActive)
         {
             customerTimer -= Time.deltaTime;
+            if (timerCircle != null)
+                timerCircle.fillAmount = Mathf.Clamp01(customerTimer / customerTime);
+            if (timerText != null)
+                timerText.text = Mathf.CeilToInt(customerTimer).ToString();
+
             if (customerTimer <= 0f)
             {
                 customerActive = false;
