@@ -9,6 +9,8 @@ public class Customer : MonoBehaviour
     public TextMeshPro orderText; // Sahnedeki Text nesnesi
     public static List<string> orderList = new List<string>();
     public static Customer Instance;
+    public string[] tutorialOrder = { "Box", "Apple", "Banana" }; // Tutorial için istenen 3 obje
+    private static bool isFirstOrder = true;
 
     private void Awake()
     {
@@ -26,17 +28,33 @@ public class Customer : MonoBehaviour
 
         Dictionary<string, int> itemCounts = new Dictionary<string, int>();
 
-        for (int i = 0; i < 3; i++)
+        if (isFirstOrder)
         {
-            int randomIndex = Random.Range(0, items.Length);
-            string itemName = items[randomIndex].name;
+            // Tutorial siparişi
+            foreach (string itemName in tutorialOrder)
+            {
+                orderList.Add(itemName);
+                if (itemCounts.ContainsKey(itemName))
+                    itemCounts[itemName]++;
+                else
+                    itemCounts[itemName] = 1;
+            }
+            isFirstOrder = false;
+        }
+        else
+        {
+            for (int i = 0; i < 3; i++)
+            {
+                int randomIndex = Random.Range(0, items.Length);
+                string itemName = items[randomIndex].name;
 
-            orderList.Add(itemName);
+                orderList.Add(itemName);
 
-            if (itemCounts.ContainsKey(itemName))
-                itemCounts[itemName]++;
-            else
-                itemCounts[itemName] = 1;
+                if (itemCounts.ContainsKey(itemName))
+                    itemCounts[itemName]++;
+                else
+                    itemCounts[itemName] = 1;
+            }
         }
 
         // Text'e yaz

@@ -53,6 +53,9 @@ public class DaySystem : MonoBehaviour
 
     private int successfulCustomerCount = 0;
 
+    [Header("Tutorial Texts")]
+    public GameObject[] tutorialTexts;
+
     void Awake()
     {
         Instance = this;
@@ -347,6 +350,12 @@ public class DaySystem : MonoBehaviour
     {
         if (isFirstCustomer)
         {
+            // Tutorial bittiğinde tutorial textleri kapat
+            if (tutorialTexts != null)
+            {
+                foreach (var obj in tutorialTexts)
+                    if (obj != null) obj.SetActive(false);
+            }
             isFirstCustomer = false;
             StartCustomerTimer();
         }
@@ -362,6 +371,12 @@ public class DaySystem : MonoBehaviour
     {
         if (isFirstCustomer)
         {
+            // Tutorial bittiğinde tutorial textleri kapat
+            if (tutorialTexts != null)
+            {
+                foreach (var obj in tutorialTexts)
+                    if (obj != null) obj.SetActive(false);
+            }
             isFirstCustomer = false;
             StartCustomerTimer();
         }

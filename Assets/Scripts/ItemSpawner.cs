@@ -9,6 +9,7 @@ public class ItemSpawner : MonoBehaviour
     public List<GameObject> spawnablePrefabs;
 
     private bool isSpawning = false;
+    private int tutorialSpawnIndex = 0;
 
     void Update()
     {
@@ -39,9 +40,28 @@ public class ItemSpawner : MonoBehaviour
         isSpawning = true;
         yield return new WaitForSeconds(1f); // optional delay
 
-        if (spawnablePrefabs.Count > 0)
+        GameObject prefabToSpawn = null;
+        // Tutorial iÃ§in ilk 3 spawn
+        if (Customer.Instance != null && tutorialSpawnIndex < Customer.Instance.tutorialOrder.Length)
         {
-            GameObject prefabToSpawn = GetWeightedRandomPrefab();
+            string tutName = Customer.Instance.tutorialOrder[tutorialSpawnIndex];
+            foreach (var prefab in spawnablePrefabs)
+            {
+                if (prefab.name == tutName)
+                {
+                    prefabToSpawn = prefab;
+                    break;
+                }
+            }
+            tutorialSpawnIndex++;
+        }
+        else if (spawnablePrefabs.Count > 0)
+        {
+            prefabToSpawn = GetWeightedRandomPrefab();
+        }
+
+        if (prefabToSpawn != null)
+        {
             Instantiate(prefabToSpawn, spawnPosition.position, Quaternion.identity);
         }
 
@@ -50,7 +70,7 @@ public class ItemSpawner : MonoBehaviour
 
     GameObject GetWeightedRandomPrefab()
     {
-        // Her prefab için sahnedeki mevcut sayýyý say
+        // Her prefab iÃ§in sahnedeki mevcut sayÄ±yÄ± say
         List<int> counts = new List<int>();
         for (int i = 0; i < spawnablePrefabs.Count; i++)
         {
@@ -58,8 +78,8 @@ public class ItemSpawner : MonoBehaviour
             counts.Add(count);
         }
 
-        // Aðýrlýklarý ters orantýlý yap: ne kadar az, o kadar büyük aðýrlýk
-        // weight = 1 / (count + 1) ile sýfýra bölünme önlenir
+        // AÄŸÄ±rlÄ±klarÄ± ters orantÄ±lÄ± yap: ne kadar az, o kadar bÃ¼yÃ¼k aÄŸÄ±rlÄ±k
+        // weight = 1 / (count + 1) ile sÄ±fÄ±ra bÃ¶lÃ¼nme Ã¶nlenir
         List<float> weights = new List<float>();
         float totalWeight = 0f;
         for (int i = 0; i < counts.Count; i++)
@@ -69,7 +89,7 @@ public class ItemSpawner : MonoBehaviour
             totalWeight += weight;
         }
 
-        // Aðýrlýklý rastgele seçim
+        // AÄŸÄ±rlÄ±klÄ± rastgele seÃ§im
         float randomValue = Random.Range(0f, totalWeight);
         float cumulative = 0f;
         for (int i = 0; i < weights.Count; i++)
@@ -81,18 +101,18 @@ public class ItemSpawner : MonoBehaviour
             }
         }
 
-        // Normal þartlarda buraya gelmemeli ama sorun olursa ilk prefabi döndür
+        // Normal ÅŸartlarda buraya gelmemeli ama sorun olursa ilk prefabi dÃ¶ndÃ¼r
         return spawnablePrefabs[0];
     }
 
     int CountItemsInScene(string prefabName)
     {
-        // Sahnedeki "Item" tag'li objeler arasýnda ismi prefabName ile ayný olanlarý say
+        // Sahnedeki "Item" tag'li objeler arasÄ±nda ismi prefabName ile aynÄ± olanlarÄ± say
         GameObject[] items = GameObject.FindGameObjectsWithTag("Item");
         int count = 0;
         foreach (var item in items)
         {
-            if (item.name.Contains(prefabName)) // prefab adý ile obje adýný karþýlaþtýrýyoruz
+            if (item.name.Contains(prefabName)) // prefab adÄ± ile obje adÄ±nÄ± karÅŸÄ±laÅŸtÄ±rÄ±yoruz
             {
                 count++;
             }
