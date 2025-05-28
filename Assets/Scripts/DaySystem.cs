@@ -45,6 +45,14 @@ public class DaySystem : MonoBehaviour
     [Header("Transition Hide Objects")]
     public GameObject[] objectsToHideDuringTransition;
 
+    [Header("Game Over Stats UI")]
+    public GameObject gameOverPanel;
+    public TextMeshProUGUI statsDayText;
+    public TextMeshProUGUI statsCustomerText;
+    public TextMeshProUGUI statsPressSpaceText;
+
+    private int successfulCustomerCount = 0;
+
     void Awake()
     {
         Instance = this;
@@ -277,7 +285,7 @@ public class DaySystem : MonoBehaviour
             currentCross++;
             if (currentCross >= crossObjects.Length)
             {
-                // Oyun bitti, fade to black ve menüye dön
+                // Oyun bitti, fade to black ve menüye dönmeden önce stats göster
                 StartCoroutine(GameOverSequence());
             }
         }
@@ -357,6 +365,7 @@ public class DaySystem : MonoBehaviour
             isFirstCustomer = false;
             StartCustomerTimer();
         }
+        successfulCustomerCount++;
         ResetCustomerTimer();
     }
 
@@ -371,6 +380,29 @@ public class DaySystem : MonoBehaviour
             blackFadeImage.color = c;
             yield return StartCoroutine(FadeToBlack(blackFadeImage, 2f));
         }
+        // Stats ekranı göster
+        if (gameOverPanel != null)
+        {
+            gameOverPanel.SetActive(true);
+            if (statsDayText != null)
+                statsDayText.text = $"Days Survived: {currentDay}";
+            if (statsCustomerText != null)
+                statsCustomerText.text = $"Customers Served: {successfulCustomerCount}";
+            if (statsPressSpaceText != null)
+                statsPressSpaceText.text = "Press SPACE to go back to menu";
+        }
+        // Space tuşunu bekle
+        bool waiting = true;
+        while (waiting)
+        {
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                waiting = false;
+            }
+            yield return null;
+        }
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
         SceneManager.LoadScene("Main_Menu");
     }
 }
