@@ -10,6 +10,7 @@ public class DaySystem : MonoBehaviour
 
     [Header("UI")]
     public TextMeshProUGUI dayText;
+    public TextMeshProUGUI dayTransition;
 
     [Header("Crosses")]
     public GameObject[] crossObjects; // 3D çarpı objeleri (3 adet)
@@ -35,6 +36,15 @@ public class DaySystem : MonoBehaviour
     public Image timerCircle;
     public TextMeshProUGUI timerText;
 
+    private bool isFirstCustomer = true;
+    private bool isDayTransition = false;
+
+    [Header("Day Timer UI")]
+    public Image dayTimerCircle;
+
+    [Header("Transition Hide Objects")]
+    public GameObject[] objectsToHideDuringTransition;
+
     void Awake()
     {
         Instance = this;
@@ -45,13 +55,16 @@ public class DaySystem : MonoBehaviour
         dayTimer = dayDuration;
         ShowDayText();
         ResetCrosses();
-        StartCustomerTimer();
+        isFirstCustomer = true;
+        if (timerCircle != null) timerCircle.gameObject.SetActive(false);
+        if (timerText != null) timerText.gameObject.SetActive(false);
+        // İlk müşteri için timer başlatma
     }
 
     void Update()
     {
         // Gün sayacı
-        if (!dayTextVisible)
+        if (!dayTextVisible && !isDayTransition && !isFirstCustomer)
         {
             dayTimer -= Time.deltaTime;
             if (dayTimer <= 0f)
@@ -59,9 +72,11 @@ public class DaySystem : MonoBehaviour
                 NextDay();
             }
         }
+        if (dayTimerCircle != null)
+            dayTimerCircle.fillAmount = Mathf.Clamp01(dayTimer / dayDuration);
 
-        // Müşteri zamanlayıcı
-        if (customerActive)
+        // Müşteri zamanlayıcı (ilk müşteri hariç)
+        if (customerActive && !isFirstCustomer)
         {
             customerTimer -= Time.deltaTime;
             if (timerCircle != null)
@@ -87,59 +102,169 @@ public class DaySystem : MonoBehaviour
 
     IEnumerator DayTextFadeInOut()
     {
-        // Orijinal pozisyonu kaydet
-        RectTransform rect = dayText.GetComponent<RectTransform>();
-        Vector2 originalPos = rect.anchoredPosition;
-        Vector2 startPos = originalPos + new Vector2(0, 200f); // yukarıdan başlasın
-        Vector2 endPos = originalPos + new Vector2(0, 200f);   // yukarıya çıksın
         float duration = 1.0f;
         float elapsed = 0f;
         Color c = dayText.color;
-        c.a = 0f;
-        dayText.color = c;
-        rect.anchoredPosition = startPos;
 
-        // Fade In: Yukarıdan orijinal pozisyona inerken alpha 0->1
+        // Fade Out eski gün
         while (elapsed < duration)
         {
             float t = elapsed / duration;
-            rect.anchoredPosition = Vector2.Lerp(startPos, originalPos, t);
-            c.a = Mathf.Lerp(0f, 1f, t);
-            dayText.color = c;
-            elapsed += Time.unscaledDeltaTime;
-            yield return null;
-        }
-        rect.anchoredPosition = originalPos;
-        c.a = 1f;
-        dayText.color = c;
-
-        // Bekleme süresi
-        yield return new WaitForSeconds(1.3f);
-
-        // Fade Out: Orijinalden yukarıya çıkarken alpha 1->0
-        duration = 0.7f;
-        elapsed = 0f;
-        while (elapsed < duration)
-        {
-            float t = elapsed / duration;
-            rect.anchoredPosition = Vector2.Lerp(originalPos, endPos, t);
             c.a = Mathf.Lerp(1f, 0f, t);
             dayText.color = c;
             elapsed += Time.unscaledDeltaTime;
             yield return null;
         }
-        rect.anchoredPosition = originalPos;
-        c.a = 0f;
+
+        // Yeni gün textini ayarla
+        dayText.text = $"Day {currentDay}";
+        elapsed = 0f;
+
+        // Fade In yeni gün
+        while (elapsed < duration)
+        {
+            float t = elapsed / duration;
+            c.a = Mathf.Lerp(0f, 1f, t);
+            dayText.color = c;
+            elapsed += Time.unscaledDeltaTime;
+            yield return null;
+        }
+
+        c.a = 1f;
         dayText.color = c;
-        dayText.gameObject.SetActive(false);
         dayTextVisible = false;
     }
 
     void NextDay()
     {
+        StartCoroutine(DayTransitionSequence());
+    }
+
+    IEnumerator DayTransitionSequence()
+    {
+        isDayTransition = true;
+        // Geçişte objeleri kapat
+        if (objectsToHideDuringTransition != null)
+        {
+            foreach (var obj in objectsToHideDuringTransition)
+                if (obj != null) obj.SetActive(false);
+        }
+        // Fade to black
+        if (blackFadeImage != null)
+        {
+            blackFadeImage.gameObject.SetActive(true);
+            Color c = blackFadeImage.color;
+            c.a = 0f;
+            blackFadeImage.color = c;
+            yield return StartCoroutine(FadeToBlack(blackFadeImage, 1.2f));
+        }
+        // 3 saniye tam siyah bekle ve dayTransition animasyonu başlat
+        if (dayTransition != null)
+        {
+            dayTransition.text = $"Day {currentDay + 1}";
+            yield return StartCoroutine(DayTransitionMoveAnim(dayTransition, 3f));
+        }
+        else
+        {
+            yield return new WaitForSeconds(3f);
+        }
+
+        // Yeni gün başlat
         currentDay++;
         dayTimer = dayDuration;
         ShowDayText();
+
+        // Fade from black
+        if (blackFadeImage != null)
+        {
+            yield return StartCoroutine(FadeFromBlack(blackFadeImage, 1.2f));
+            blackFadeImage.gameObject.SetActive(false);
+        }
+        // Geçiş bittiğinde objeleri tekrar aç
+        if (objectsToHideDuringTransition != null)
+        {
+            foreach (var obj in objectsToHideDuringTransition)
+                if (obj != null) obj.SetActive(true);
+        }
+        isDayTransition = false;
+    }
+
+    IEnumerator FadeToBlack(Image img, float duration)
+    {
+        float elapsed = 0f;
+        Color c = img.color;
+        c.a = 0f;
+        img.color = c;
+        while (elapsed < duration)
+        {
+            c.a = Mathf.Lerp(0f, 1f, elapsed / duration);
+            img.color = c;
+            elapsed += Time.unscaledDeltaTime;
+            yield return null;
+        }
+        c.a = 1f;
+        img.color = c;
+    }
+
+    IEnumerator FadeFromBlack(Image img, float duration)
+    {
+        float elapsed = 0f;
+        Color c = img.color;
+        c.a = 1f;
+        img.color = c;
+        while (elapsed < duration)
+        {
+            c.a = Mathf.Lerp(1f, 0f, elapsed / duration);
+            img.color = c;
+            elapsed += Time.unscaledDeltaTime;
+            yield return null;
+        }
+        c.a = 0f;
+        img.color = c;
+    }
+
+    IEnumerator DayTransitionMoveAnim(TextMeshProUGUI text, float totalDuration)
+    {
+        text.gameObject.SetActive(true);
+        RectTransform rect = text.GetComponent<RectTransform>();
+        Vector2 originalPos = rect.anchoredPosition;
+        Vector2 downPos = originalPos + new Vector2(0, -500f);
+        Vector2 upPos = originalPos + new Vector2(0, 500f);
+        float moveDuration = totalDuration * 0.4f;
+        float waitDuration = totalDuration * 0.2f;
+        float elapsed = 0f;
+        Color c = text.color;
+        c.a = 0f;
+        text.color = c;
+        // Aşağıya inme + fade in
+        while (elapsed < moveDuration)
+        {
+            float t = elapsed / moveDuration;
+            rect.anchoredPosition = Vector2.Lerp(originalPos, downPos, t);
+            c.a = Mathf.Lerp(0f, 1f, t);
+            text.color = c;
+            elapsed += Time.unscaledDeltaTime;
+            yield return null;
+        }
+        rect.anchoredPosition = downPos;
+        c.a = 1f;
+        text.color = c;
+        yield return new WaitForSeconds(waitDuration);
+        // Yukarı çıkma + fade out
+        elapsed = 0f;
+        while (elapsed < moveDuration)
+        {
+            float t = elapsed / moveDuration;
+            rect.anchoredPosition = Vector2.Lerp(downPos, upPos, t);
+            c.a = Mathf.Lerp(1f, 0f, t);
+            text.color = c;
+            elapsed += Time.unscaledDeltaTime;
+            yield return null;
+        }
+        rect.anchoredPosition = originalPos;
+        c.a = 0f;
+        text.color = c;
+        text.gameObject.SetActive(false);
     }
 
     public void AddCross()
@@ -179,13 +304,24 @@ public class DaySystem : MonoBehaviour
     {
         customerTimer = customerTime;
         customerActive = true;
+        if (timerCircle != null) timerCircle.gameObject.SetActive(true);
+        if (timerText != null) timerText.gameObject.SetActive(true);
     }
 
     // Müşteri zamanlayıcıyı sıfırla (doğru sipariş verildiğinde çağrılacak)
     public void ResetCustomerTimer()
     {
-        customerTimer = customerTime;
-        customerActive = true;
+        if (isFirstCustomer)
+        {
+            // İlk müşteri tamamlandı, timer başlasın
+            isFirstCustomer = false;
+            StartCustomerTimer();
+        }
+        else
+        {
+            customerTimer = customerTime;
+            customerActive = true;
+        }
     }
 
     // Müşteri süresi dolduğunda
@@ -201,6 +337,11 @@ public class DaySystem : MonoBehaviour
     // Yanlış siparişten de çağrılacak
     public void OnWrongOrder()
     {
+        if (isFirstCustomer)
+        {
+            isFirstCustomer = false;
+            StartCustomerTimer();
+        }
         AddCross();
         // Yeni müşteri oluştur
         if (Customer.Instance != null)
@@ -211,6 +352,11 @@ public class DaySystem : MonoBehaviour
     // Doğru siparişten de çağrılacak
     public void OnCorrectOrder()
     {
+        if (isFirstCustomer)
+        {
+            isFirstCustomer = false;
+            StartCustomerTimer();
+        }
         ResetCustomerTimer();
     }
 
@@ -226,22 +372,5 @@ public class DaySystem : MonoBehaviour
             yield return StartCoroutine(FadeToBlack(blackFadeImage, 2f));
         }
         SceneManager.LoadScene("Main_Menu");
-    }
-
-    IEnumerator FadeToBlack(Image img, float duration)
-    {
-        float elapsed = 0f;
-        Color c = img.color;
-        c.a = 0f;
-        img.color = c;
-        while (elapsed < duration)
-        {
-            c.a = Mathf.Lerp(0f, 1f, elapsed / duration);
-            img.color = c;
-            elapsed += Time.unscaledDeltaTime;
-            yield return null;
-        }
-        c.a = 1f;
-        img.color = c;
     }
 }
