@@ -30,7 +30,7 @@ public class Checkout : MonoBehaviour
             if (item != null)
             {
                 receivedItems.Add(item.itemName);
-                Debug.Log("Alýnan item: " + item.itemName);
+                Debug.Log("AlÄ±nan item: " + item.itemName);
 
                 if (receivedItems.Count == 3)
                 {
@@ -60,14 +60,18 @@ public class Checkout : MonoBehaviour
 
         if (allMatch && tempOrder.Count == 0)
         {
-            Debug.Log("Sipariþ doðru! Yeni sipariþ oluþturuluyor...");
+            Debug.Log("SipariÅŸ doÄŸru! Yeni sipariÅŸ oluÅŸturuluyor...");
             StartCoroutine(ShowFeedback(Correct, Green));
             Customer.Instance.CreateNewOrder();
+            if (DaySystem.Instance != null)
+                DaySystem.Instance.OnCorrectOrder();
         }
         else
         {
-            Debug.Log("Yanlýþ sipariþ!");
+            Debug.Log("YanlÄ±ÅŸ sipariÅŸ!");
             StartCoroutine(ShowFeedback(Wrong, Red));
+            if (DaySystem.Instance != null)
+                DaySystem.Instance.OnWrongOrder();
         }
 
         receivedItems.Clear();
@@ -86,7 +90,7 @@ public class Checkout : MonoBehaviour
     {
         SetMaterial(obj, mat);
 
-        // Ses efektini çal
+        // Ses efektini Ã§al
         if (mat == Green && successAudio != null)
             successAudio.Play();
         else if (mat == Red && failAudio != null)
