@@ -35,7 +35,7 @@ public class MainMenu : MonoBehaviour
     {
         Debug.Log("New Game");
         PlayClickSound();
-        //SceneManager.LoadScene("GameScene"); // sahne adýný kendi sahnene göre deðiþtir
+        SceneManager.LoadScene("Demo1"); // sahne adï¿½nï¿½ kendi sahnene gï¿½re deï¿½iï¿½tir
     }
 
     public void OpenSettings()
@@ -75,11 +75,11 @@ public class MainMenu : MonoBehaviour
 
     IEnumerator SlideObjectsDownSmoothly()
     {
-        float duration = 0.5f; // hýzlý ama smooth
-        float distance = -500f; // ne kadar aþaðý kayacak
+        float duration = 0.5f; // hï¿½zlï¿½ ama smooth
+        float distance = -500f; // ne kadar aï¿½aï¿½ï¿½ kayacak
         float elapsed = 0f;
 
-        // Baþlangýç pozisyonlarýný kaydet
+        // Baï¿½langï¿½ï¿½ pozisyonlarï¿½nï¿½ kaydet
         Vector3 blackStart = blackBox.transform.localPosition;
         Vector3 titleStart = title.transform.localPosition;
         Vector3 newGameStart = newGameButton.transform.localPosition;
@@ -93,7 +93,7 @@ public class MainMenu : MonoBehaviour
         while (elapsed < duration)
         {
             float t = elapsed / duration;
-            t = Mathf.SmoothStep(0, 1, t); // yumuþak geçiþ
+            t = Mathf.SmoothStep(0, 1, t); // yumuï¿½ak geï¿½iï¿½
 
             blackBox.transform.localPosition = Vector3.Lerp(blackStart, blackStart + offset, t);
             title.transform.localPosition = Vector3.Lerp(titleStart, titleStart + offset, t);
@@ -106,7 +106,7 @@ public class MainMenu : MonoBehaviour
             yield return null;
         }
 
-        // Pozisyonlarý kesin olarak hedefe oturt
+        // Pozisyonlarï¿½ kesin olarak hedefe oturt
         blackBox.transform.localPosition = blackStart + offset;
         title.transform.localPosition = titleStart + offset;
         newGameButton.transform.localPosition = newGameStart + offset;
@@ -122,11 +122,11 @@ public class MainMenu : MonoBehaviour
 
     IEnumerator SlideObjectsUpSmoothly()
     {
-        float duration = 0.5f; // hýzlý ama smooth
-        float distance = +500f; // ne kadar aþaðý kayacak
+        float duration = 0.5f; // hï¿½zlï¿½ ama smooth
+        float distance = +500f; // ne kadar aï¿½aï¿½ï¿½ kayacak
         float elapsed = 0f;
 
-        // Baþlangýç pozisyonlarýný kaydet
+        // Baï¿½langï¿½ï¿½ pozisyonlarï¿½nï¿½ kaydet
         Vector3 blackStart = blackBox.transform.localPosition;
         Vector3 titleStart = title.transform.localPosition;
         Vector3 newGameStart = newGameButton.transform.localPosition;
@@ -140,7 +140,7 @@ public class MainMenu : MonoBehaviour
         while (elapsed < duration)
         {
             float t = elapsed / duration;
-            t = Mathf.SmoothStep(0, 1, t); // yumuþak geçiþ
+            t = Mathf.SmoothStep(0, 1, t); // yumuï¿½ak geï¿½iï¿½
 
             blackBox.transform.localPosition = Vector3.Lerp(blackStart, blackStart + offset, t);
             title.transform.localPosition = Vector3.Lerp(titleStart, titleStart + offset, t);
@@ -153,7 +153,7 @@ public class MainMenu : MonoBehaviour
             yield return null;
         }
 
-        // Pozisyonlarý kesin olarak hedefe oturt
+        // Pozisyonlarï¿½ kesin olarak hedefe oturt
         blackBox.transform.localPosition = blackStart + offset;
         title.transform.localPosition = titleStart + offset;
         newGameButton.transform.localPosition = newGameStart + offset;
@@ -201,9 +201,9 @@ public class MainMenu : MonoBehaviour
         PlayClickSound();
         Application.Quit();
 #if UNITY_EDITOR
-    UnityEditor.EditorApplication.isPlaying = false; // Editörde çalýþmayý durdurur
+    UnityEditor.EditorApplication.isPlaying = false; // Editï¿½rde ï¿½alï¿½ï¿½mayï¿½ durdurur
 #else
-        Application.Quit(); // Build'de oyunu kapatýr
+        Application.Quit(); // Build'de oyunu kapatï¿½r
 #endif
     }
 }
