@@ -22,6 +22,9 @@ public class PauseGame : MonoBehaviour
     [Header("Camera Control")]
     public MonoBehaviour cameraController; // Inspector'dan atanacak
 
+    [Header("Screen Fade")]
+    public Image blackFadeImage; // Inspector'dan atanacak
+
     private bool isPaused = false;
     private const string MusicVolumeKey = "MusicVolume";
     private const string SoundVolumeKey = "SoundVolume";
@@ -51,6 +54,14 @@ public class PauseGame : MonoBehaviour
         if (quitButton != null) quitButton.onClick.AddListener(QuitToMenu);
         if (settingsPanel != null) settingsPanel.SetActive(false);
         if (pauseMenuUI != null) pauseMenuUI.SetActive(false);
+
+        if (blackFadeImage != null)
+        {
+            Color c = blackFadeImage.color;
+            c.a = 1f;
+            blackFadeImage.color = c;
+            StartCoroutine(FadeFromBlack(blackFadeImage, 4.0f));
+        }
     }
 
     void Update()
@@ -146,6 +157,24 @@ public class PauseGame : MonoBehaviour
         }
         canvasGroup.alpha = 0f;
         canvasGroup.gameObject.SetActive(false);
+    }
+
+    IEnumerator FadeFromBlack(Image img, float duration)
+    {
+        float elapsed = 0f;
+        Color c = img.color;
+        c.a = 1f;
+        img.color = c;
+        while (elapsed < duration)
+        {
+            c.a = Mathf.Lerp(1f, 0f, elapsed / duration);
+            img.color = c;
+            elapsed += Time.unscaledDeltaTime;
+            yield return null;
+        }
+        c.a = 0f;
+        img.color = c;
+        img.gameObject.SetActive(false);
     }
 
     public void OnMusicVolumeChanged(float value)

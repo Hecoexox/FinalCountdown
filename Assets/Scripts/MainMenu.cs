@@ -35,7 +35,7 @@ public class MainMenu : MonoBehaviour
     {
         Debug.Log("New Game");
         PlayClickSound();
-        SceneManager.LoadScene("Demo1"); // sahne ad�n� kendi sahnene g�re de�i�tir
+        SceneManager.LoadScene("FinalScene"); // sahne ad�n� kendi sahnene g�re de�i�tir
     }
 
     public void OpenSettings()
